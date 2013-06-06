@@ -16,41 +16,41 @@ La class ne contient pas encore de méthode public mais cela tend à changer
 afin de permettre une configuration optimal du rendu.
 
 Les classes fonctionnent avec des lien absolu et part du principe que 
-votre site se trouve à la base de votre domaine (ou sous-domaine).
-Exemple :
-http://www.monsite.com/index.php  <- Fonctionne
-http://www.monsite.com/site/index.php  <- Ne fonctionne pas
+votre site se trouve à la base de votre domaine (ou sous-domaine).         
+Exemple :        
+http://www.monsite.com/index.php  <- Fonctionne       
+http://www.monsite.com/site/index.php  <- Ne fonctionne pas       
 
 Fichiers
 --------
 
 Tout les fichiers se trouvent dans le dossier /armurerie/ son appellation 
-seras donc omise ci-suivant.
+seras donc omise ci-suivant.       
 
-/class/Armurerie.class.php	Class principal, affiche le rendu.
-/class/BddManager.class.php	Class de connexion à la base de donnée
-/class/Item.class.php		Class décodant les items du personnage
-/class/Panoplie.class.php	Class décodant les panoplies
-/class/Personnage.class.php	Class décodant les personnages
-/class/Stats.class.php		Class décodant les statistiques (perso + item)
-loadArmurerie.php		Appel des class et fichiers de configuration
-/params/config.php		Fichier de configuration
+/class/Armurerie.class.php	Class principal, affiche le rendu.      
+/class/BddManager.class.php	Class de connexion à la base de donnée       
+/class/Item.class.php		Class décodant les items du personnage       
+/class/Panoplie.class.php	Class décodant les panoplies        
+/class/Personnage.class.php	Class décodant les personnages        
+/class/Stats.class.php		Class décodant les statistiques (perso + item)        
+loadArmurerie.php		Appel des class et fichiers de configuration        
+/params/config.php		Fichier de configuration       
 
 Installation
 -----------
 
-L'installation de l'armurerie est simple :
+L'installation de l'armurerie est simple :      
 
-1ere étape :
+1ere étape :       
 Si votre table item template ne contiens pas les gfx des items importez-y 
-le fichier /sql/updateItemTemplate.sql
-2ème étape :
-Placez le dossier /armurerie/ et tout son contenu à la RACINE de votre domaine
-3ème étape
-Avant le début du code html ajoutez :
-<?php
-include_once('/armurerie/loadArmurerie.php');
-?>
+le fichier /sql/updateItemTemplate.sql       
+2ème étape :        
+Placez le dossier /armurerie/ et tout son contenu à la RACINE de votre domaine       
+3ème étape :        
+Avant le début du code html ajoutez :          
+<?php          
+include_once('/armurerie/loadArmurerie.php');       
+?>        
 
 Utilisation
 -----------
