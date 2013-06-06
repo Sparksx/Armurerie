@@ -1,0 +1,54 @@
+V1.0
+Création de l'utilisation "simple"
+Décodage de la quasi totalité des statistiques (il en manque probablement…)
+Mise en place des images (gfx, il peut en manquer)
+Barre d'xp basique, affichage du %tage et de l'xp à atteindre pour "up"
+Affichage du titre (modifiables en config : params/config.php)
+Affichage de l'image de classe/sexe
+Affichage du nom du personnage
+Affichage des statistiques principal du perso (base + items +  bonus pano)
+Mise en place des popup d'affichage des stats des items (au survol de l'item)
+Mise en place de popup de précision des stats du personnage
+
+V1.10
+Ajout de 2 nouveau thèmes (dark (de base), silver et purple)
+Ajout d'un système de vérification de maj (En cas de maj dispo, un drapeau s'affiche dans le coin supérieur droit)
+Correction d'une faille de sécurité théoriquement inexploitable. (pas exploitable, mais on sécurise quand même !)
+Ajout de la possibilité de configurer le thème
+Ajout de la possibilité de changer de position la colonne de stats
+Ajout d'une variable demandant le nom du serveur (Affichage dans le copyright)
+Ajout d'icons dans les popup d'items
+
+V1.11
+Correction du fichier updateItemTemplate.sql (Celui-ci ne fonctionnais visiblement pas)
+Modification de la gestion des thèmes
+	- L'administrateur choisis 1 thème par défaut
+	- L'utilisateur peux personnaliser le thème (uniquement pour lui)
+Ajout d'un fichier CSS static, le css est appliqué quelque soit le thème
+Modification de la popup d'expérience.
+Optimisation de la requête d'importation des items : (1 seule requête charge tout les items équipé au lieu d'une requête par item dans l'inventaire ; Gain de temps et de ressources non négociable)
+Ajout du module de recherche :
+	- Activable/désactivable en config
+	- Le module s'adapte au thème
+	- Si le nom du personnage entré n'éxiste pas, le module affiche des probabilité de résultat (nombre d'affichage configurable en config)
+Réparation : Quand on change de thème les popup suivent (Un bug subsiste au retour sur le thème initial)
+
+V1.20
+Modification de l'architecture des dossiers
+	- Séparation des bibliothèques et du plugin en lui même
+Ajout d'une bibliothèque de sécurisation (encore peu implémentée)
+Correction d'un bug au changement de couleur
+Ajout d'un fichier expliquant le fonctionnement du plugin (pas des bibliothèques)
+Modification du fonctionnement de la classe mère :
+	- L'implémentation de la classe ne créer plus la vue et ne charge plus de personnage, cela sert juste à déclaré la configuration.
+	- Le chargement d'un personnage peut être exécuté de 2 façons
+	- L'appel de l'affichage n'est faisable que d'une façon.
+	(Plus d'infos sur la nouvelle utilisation dans ReadMe.txt)
+On peux maintenant chargé plusieurs personnages.
+On peux maintenant chargé les personnage d'un compte.
+La nouvelle vue offre 2 affichages différents (selon si 1 ou plusieurs perso on été chargé)
+
+
+
+
+

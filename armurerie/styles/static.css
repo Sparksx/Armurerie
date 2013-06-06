@@ -1,0 +1,354 @@
+/* 
+    Document   : tempPop
+    Created on : 21 nov. 2012, 11:25:54
+    Author     : Sparks
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@font-face {
+	font-family: BebasNeue;
+	src: url('polices/BebasNeue.otf');
+}
+
+@font-face {
+	font-family: Myriadpro;
+	src: url('polices/MYRIADPRO-REGULAR.OTF');
+}
+
+@font-face {
+	font-family: Asafeplacetofall;
+	src: url('polices/ASafePlacetoFall.ttf');
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+
+.divSta {
+    width: 500px;
+
+    font-family: Myriadpro, Georgia;
+
+    display: inline-block;
+
+    vertical-align: middle;
+}
+.divSta #extBarre2 {
+    width: 100%;
+    height: 20px;
+
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+
+    border: 1px solid black;
+
+    overflow:  hidden;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    background-color: #f5f5f5;
+    background-color: #e6e6e6;
+    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+}
+.divSta #intBarre2 {
+    display: inline-block;
+    height: 20px;
+
+    text-align: center;
+    vertical-align: middle;
+
+    color: #2c2c2c;
+
+    margin: 0;
+    padding: 0;
+    
+    background-color: #5bb75b;
+    background-color: #51a351;
+    background-image: -ms-linear-gradient(left, #62c462, #51a351);
+    background-image: -webkit-linear-gradient(left, #62c462, #51a351);
+    background-image: -o-linear-gradient(left, #62c462, #51a351);
+    background-image: -moz-linear-gradient(left, #62c462, #51a351);
+    background-image: linear-gradient(left, #62c462, #51a351);
+    background-repeat: repeat-x;
+}
+.divSta #reste {
+    display: inline-block;
+    height: 20px;
+
+    text-align: center;
+    vertical-align: middle;
+
+    color: #2c2c2c;
+
+    margin: 0;
+    padding: 0;
+}
+
+.divSta .separate {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    margin-top: -5px;
+    
+    height: 5px;
+    width: 50px;
+    
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+.divSta #total {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    margin-top: -25px;
+    
+    width: 500px;
+    height: 25px;
+    
+    text-align: center;
+    
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+.divSta #after {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    margin-top: -45px;
+    
+    width: 150px;
+    height: 20px;
+    
+    text-align: center;
+    
+    border: 1px solid black;
+    
+    -webkit-border-radius: 4px 4px 4px 0;
+    -moz-border-radius: 4px 4px 4px 0;
+    border-radius: 4px 4px 4px 0;
+}
+.divSta #before {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    margin-top: -45px;
+    margin-left: 350px;
+    
+    width: 150px;
+    height: 20px;
+    
+    text-align: center;
+    
+    border: 1px solid black;
+    
+    -webkit-border-radius: 4px 4px 0 4px;
+    -moz-border-radius: 4px 4px 0 4px;
+    border-radius: 4px 4px 0 4px;
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+
+#personnalisation {
+    width: 100px;
+    height: 20px;
+    
+    float: right;
+    text-align: right;
+}
+#personnalisation div {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    
+    margin-right: 3px;
+    
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+#personnalisation div:hover {
+    cursor: pointer;
+}
+#personnalisation div.dark {
+    background-color: #2c2c2c;
+    background-color: #0f0f0e;
+    background-image: -ms-linear-gradient(top, #2c2c2c, #0f0f0e);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2c2c2c), to(#0f0f0e));
+    background-image: -webkit-linear-gradient(top, #2c2c2c, #0f0f0e);
+    background-image: -o-linear-gradient(top, #2c2c2c, #0f0f0e);
+    background-image: linear-gradient(top, #2c2c2c, #0f0f0e);
+    background-image: -moz-linear-gradient(top, #2c2c2c, #0f0f0e);
+    background-repeat: repeat-x;
+    
+    border: 1px solid #e6e6e6;
+}
+#personnalisation div.silver {
+    background-color: #f5f5f5;
+    background-color: #e6e6e6;
+    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    
+    border: 1px solid #2c2c2c;
+}
+#personnalisation div.purple {
+    background-color: #AB8CAE;
+    background-color: #77647A;
+    background-image: -ms-linear-gradient(top, #AB8CAE, #77647A);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#AB8CAE), to(#77647A));
+    background-image: -webkit-linear-gradient(top, #AB8CAE, #77647A);
+    background-image: -o-linear-gradient(top, #AB8CAE, #77647A);
+    background-image: linear-gradient(top, #AB8CAE, #77647A);
+    background-image: -moz-linear-gradient(top, #AB8CAE, #77647A);
+    background-repeat: repeat-x;
+    
+    border: 1px solid #2c2c2c;
+}
+
+
+
+#resultRecherche {
+    width: 600px;
+    margin: auto;
+    margin-top: 10px;
+    
+    padding-bottom: 15px;
+    
+    color: #d3d3d3;
+	
+	-moz-box-shadow: 0px 2px 5px 0px #4A4A4A;
+	-webkit-box-shadow: 0px 1px 5px 0px #4A4A4A;
+	box-shadow: 0px 1px 5px 0px #4A4A4A;
+    
+    -webkit-border-radius: 8px 0 8px 0;
+       -moz-border-radius: 8px 0 8px 0;
+            border-radius: 8px 0 8px 0;
+}
+
+#resultRecherche .affResult {
+    width: 100%;
+    height: 80px;
+    
+    margin: 5px;
+}
+#resultRecherche .affResult img {
+    float: left;
+    margin: 5px;
+
+    height: 80px;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#resultRecherche a {
+    text-decoration: none;
+    font-family: Myriadpro, Georgia;
+    
+    -moz-transition-property: font-size;
+	-webkit-transition-property: font-size;
+	-o-transition-property: font-size;
+        /* La transition durera trois secondes. */
+        -moz-transition-duration: 0.5s;
+	    -webkit-transition-duration: 0.5s;
+	    -o-transition-duration: 0.5s;
+}
+#resultRecherche a:hover {
+    font-size: 1.2em;
+}
+#resultRecherche .affResult p {
+    height: 80px;
+    width: 510px;
+    
+    padding-top: 35px;
+    
+    text-align: center;
+}
+#resultRecherche .noResult {
+    height: 60px;
+    width: 510px;
+    margin: auto;
+    
+    padding-top: 35px;
+    
+    font-family: Myriadpro, Georgia;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
+/* ---------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+
+/* Le bloc #statsPerso fait toujours les mêmes tailles */
+#OS2_armurerie {
+    width: 662px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+#OS2_armurerie #slider {
+    display: inline-block;
+    
+    width: 602px;
+    height: 442px;
+    margin: 0 auto;
+    margin-top: 20px;
+    
+    overflow: hidden;
+    
+    -moz-box-shadow: 0px 2px 5px 0px #4A4A4A;
+    -webkit-box-shadow: 0px 1px 5px 0px #4A4A4A;
+    box-shadow: 0px 1px 5px 0px #4A4A4A;
+}
+
+#prevSlide,#nextSlide{
+    display: inline-block;
+    position: relative;
+	width:30px;
+    height:50px;
+	top:-200px;
+	cursor:pointer;
+}
+
+
+#OS2_armurerie #onePerso {
+    width: 602px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#OS2_armurerie .vueArmurerie {
+    float:left;
+	position:relative;
+    width: 600px;
+    height: 441px;
+}
+
+#OS2_armurerie #statsPerso {
+    width: 100%;
+    height: 330px;
+}

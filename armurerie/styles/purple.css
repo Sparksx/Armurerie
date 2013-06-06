@@ -1,0 +1,465 @@
+@font-face {
+	font-family: BebasNeue;
+	src: url('polices/BebasNeue.otf');
+}
+
+@font-face {
+	font-family: Myriadpro;
+	src: url('polices/MYRIADPRO-REGULAR.OTF');
+}
+
+@font-face {
+	font-family: Asafeplacetofall;
+	src: url('polices/ASafePlacetoFall.ttf');
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+
+
+#recherche.purple {
+	width: 600px;
+	height: 35px;
+	
+	padding-top: 15px;
+	
+	margin: auto;
+	text-align: center;
+	
+	-webkit-border-radius: 8px 0 8px 0;
+       -moz-border-radius: 8px 0 8px 0;
+            border-radius: 8px 0 8px 0;
+	
+	background-color: #AB8CAE;
+    background-color: #77647A;
+    background-image: -ms-linear-gradient(top, #AB8CAE, #77647A);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#AB8CAE), to(#77647A));
+    background-image: -webkit-linear-gradient(top, #AB8CAE, #77647A);
+    background-image: -o-linear-gradient(top, #AB8CAE, #77647A);
+    background-image: linear-gradient(top, #AB8CAE, #77647A);
+    background-image: -moz-linear-gradient(top, #AB8CAE, #77647A);
+    background-repeat: repeat-x;
+	
+	color: #d3d3d3;
+	
+	-moz-box-shadow: 0px 2px 5px 0px #4A4A4A;
+	-webkit-box-shadow: 0px 1px 5px 0px #4A4A4A;
+	box-shadow: 0px 1px 5px 0px #4A4A4A;
+}
+#recherche.purple #cherche {
+	-webkit-border-radius: 0 4px 0 4px;
+       -moz-border-radius: 0 4px 0 4px;
+            border-radius: 0 4px 0 4px;
+}
+
+#resultRecherche.purple {
+    background-color: #AB8CAE;
+    background-color: #77647A;
+    background-image: -ms-linear-gradient(top, #AB8CAE, #77647A);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#AB8CAE), to(#77647A));
+    background-image: -webkit-linear-gradient(top, #AB8CAE, #77647A);
+    background-image: -o-linear-gradient(top, #AB8CAE, #77647A);
+    background-image: linear-gradient(top, #AB8CAE, #77647A);
+    background-image: -moz-linear-gradient(top, #AB8CAE, #77647A);
+    background-repeat: repeat-x;
+}
+#resultRecherche.purple a {
+    color: #d3d3d3;
+}
+#resultRecherche.purple p {
+    color: #d3d3d3;
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+
+#OS2_armurerie.purple .vueArmurerie {
+    border: 1px solid #AB8CAE;
+    border-top: none;
+
+    -moz-box-shadow: 0px 2px 5px 0px #4A4A4A;
+    -webkit-box-shadow: 0px 1px 5px 0px #4A4A4A;
+    box-shadow: 0px 1px 5px 0px #4A4A4A;
+}
+
+#OS2_armurerie.purple #infosPerso {
+    width: 100%;
+    margin: auto;
+
+    background-color: #AB8CAE;
+    background-color: #77647A;
+    background-image: -ms-linear-gradient(top, #AB8CAE, #77647A);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#AB8CAE), to(#77647A));
+    background-image: -webkit-linear-gradient(top, #AB8CAE, #77647A);
+    background-image: -o-linear-gradient(top, #AB8CAE, #77647A);
+    background-image: linear-gradient(top, #AB8CAE, #77647A);
+    background-image: -moz-linear-gradient(top, #AB8CAE, #77647A);
+    background-repeat: repeat-x;
+
+    color: black;
+    
+    -moz-transition-property: color;
+	-webkit-transition-property: color;
+	-o-transition-property: color;
+        /* La transition durera trois secondes. */
+        -moz-transition-duration: 0.5s;
+	    -webkit-transition-duration: 0.5s;
+	    -o-transition-duration: 0.5s;
+}
+
+#OS2_armurerie.purple #infosPerso .avatar {
+    float: left;
+    margin: 5px;
+
+    height: 80px;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#OS2_armurerie.purple #infosPerso div {
+    height: 20px;
+
+    margin-top: 3px;
+}
+
+#OS2_armurerie.purple #infosPerso #name {
+    width: 410px;
+    margin: auto;
+
+    display: inline-block;
+
+    text-align: center;
+    vertical-align: middle;
+
+    font-family: BebasNeue, Georgia;
+    font-size: 1.3em;
+    
+    -moz-transition-property: color;
+	-webkit-transition-property: color;
+	-o-transition-property: color;
+        /* La transition durera trois secondes. */
+        -moz-transition-duration: 0.5s;
+	    -webkit-transition-duration: 0.5s;
+	    -o-transition-duration: 0.5s;
+}
+#OS2_armurerie.purple #infosPerso #niveau {
+    width: 500px;
+    height: 50px;
+
+    font-family: Myriadpro, Georgia;
+
+    display: inline-block;
+
+    vertical-align: middle;
+}
+#OS2_armurerie.purple #infosPerso #niveau .right {
+    float: right;
+}
+#OS2_armurerie.purple #infosPerso #extBarre {
+    width: 100%;
+    height: 20px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 1px solid black;
+
+    overflow:  hidden;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    background-color: #f5f5f5;
+    background-color: #e6e6e6;
+    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+}
+#OS2_armurerie.purple #infosPerso #intBarre {
+    height: 20px;
+
+    text-align: center;
+    vertical-align: middle;
+
+    color: #2c2c2c;
+
+    margin: 0;
+    padding: 0;
+
+    /*    background-color: #5bb75b;
+    background-color: #51a351;
+    background-image: -ms-linear-gradient(top, #62c462, #51a351);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
+    background-image: -webkit-linear-gradient(top, #62c462, #51a351);
+    background-image: -o-linear-gradient(top, #62c462, #51a351);
+    background-image: -moz-linear-gradient(top, #62c462, #51a351);
+    background-image: linear-gradient(top, #62c462, #51a351);
+    background-repeat: repeat-x;*/
+    
+    background-color: #5bb75b;
+    background-color: #51a351;
+    background-image: -ms-linear-gradient(left, #62c462, #51a351);
+    background-image: -webkit-linear-gradient(left, #62c462, #51a351);
+    background-image: -o-linear-gradient(left, #62c462, #51a351);
+    background-image: -moz-linear-gradient(left, #62c462, #51a351);
+    background-image: linear-gradient(left, #62c462, #51a351);
+    background-repeat: repeat-x;
+}
+#OS2_armurerie.purple #infosPerso #titre {
+    width: 500px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+
+    display: inline-block;
+
+    font-size: 0.9em;
+    font-family: Asafeplacetofall, Georgia;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+
+#OS2_armurerie.purple #statsPerso {
+    display: table;
+}
+
+#OS2_armurerie.purple #statsPerso #armurerie {
+    display: table-cell;
+
+    width: 440px;
+    height: 100%;
+
+    padding-bottom: 10px;
+    background-color: #f5f5f5;
+
+    -moz-box-shadow: 0px 2px 5px 0px #4A4A4A inset;
+    -webkit-box-shadow: 0px 1px 5px 0px #4A4A4A inset;
+    box-shadow: 0px 1px 5px #4A4A4A inset;
+}
+
+#OS2_armurerie.purple #statsPerso #statsPanel {
+    display: table-cell;
+
+    width: 170px;
+    height: 100%;
+
+    background-color: #77647A;
+    border-left: 3px solid #AB8CAE;
+
+    color: white;
+}
+
+
+#OS2_armurerie.purple #statsPerso #armurerie #dofus {
+    display: inline-block;
+
+    position: relative;
+    top: -15px;
+
+    width: 50px;
+}
+#OS2_armurerie.purple #statsPerso #armurerie #dofus .dof {
+    width: 43px;
+    height: 43px;
+    margin: 3px;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+#OS2_armurerie.purple #statsPerso #armurerie #dofus .dof img {
+    max-width: 43px;
+    max-height: 43px;
+}
+
+#OS2_armurerie.purple #statsPerso #armurerie #onPerso {
+    display: inline-block;
+
+    width: 300px;
+    height: 300px;
+    
+    position: relative;
+    top: -10px;
+
+    margin-left: 5px;
+    margin-right: 5px;
+
+    border: 1px solid #AB8CAE;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    background-image: url("/armurerie/images/personnages/nobody.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 134px 300px;
+}
+#OS2_armurerie.purple #statsPerso #armurerie #itemRight {
+    display: inline-block;
+
+    position: relative;
+    top: -120px;
+
+    width: 63px;
+}
+#OS2_armurerie.purple #statsPerso #armurerie .item {
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    border: 1px solid black;
+
+    opacity: 0.8;
+
+    background-color: #AB8CAE;
+    background-color: #77647A;
+    background-image: -ms-radial-gradient(#AB8CAE, #77647A);
+    background-image: -webkit-radial-gradient(#AB8CAE, #77647A);
+    background-image: -o-radial-gradient(#AB8CAE, #77647A);
+    background-image: radial-gradient(#AB8CAE, #77647A);
+    background-image: -moz-radial-gradient(#AB8CAE, #77647A);
+
+    /* 50% 50%, circle, cover,  */
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#OS2_armurerie.purple #statsPerso #armurerie .item img {
+    width: 40px;
+    height: 40px;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#OS2_armurerie.purple #statsPerso #armurerie #itemRight .item {
+    margin: 10px 0;
+}
+#OS2_armurerie.purple #statsPerso #armurerie #onPerso .item {
+    position: relative;
+}
+#OS2_armurerie.purple #statsPerso #armurerie #onPerso .pos15 {
+    top: 25px;
+    left: 50px;
+
+    width: 50px;
+    height: 50px;
+}
+#OS2_armurerie.purple #statsPerso #armurerie #onPerso .pos1 {
+    top: -25px;
+    left: 210px;
+
+    width: 50px;
+    height: 50px;
+}
+#OS2_armurerie.purple #statsPerso #armurerie #onPerso .pos1 img, #OS2_armurerie.purple #statsPerso #armurerie #onPerso .pos15 img {
+    width: 50px;
+    height: 50px;
+}
+#OS2_armurerie.purple #statsPerso #armurerie #onPerso .pos0 {
+    top: -20px;
+    left: 130px;
+}
+#OS2_armurerie.purple #statsPerso #armurerie #onPerso .pos2 {
+    top: 10px;
+    left: 80px;
+}
+#OS2_armurerie.purple #statsPerso #armurerie #onPerso .pos3 {
+    top: -25px;
+    left: 130px;
+}
+#OS2_armurerie.purple #statsPerso #armurerie #onPerso .pos4 {
+    top: -75px;
+    left: 180px;
+}
+#OS2_armurerie.purple #statsPerso #armurerie #onPerso .pos5 {
+    top: -20px;
+    left: 130px;
+}
+
+/* --------------------------------------------------------- */
+
+#OS2_armurerie.purple #statsPerso #statsPanel .titre {
+    font-family: Myriadpro, Georgia;
+    font-size: 1.2em;
+}
+#OS2_armurerie.purple #statsPerso #statsPanel .stati {
+    width: 160px;
+    height: 20px;
+
+    margin: 8px auto;
+
+    text-align: center;
+
+    background-color: #f5f5f5;
+    color: #333333;
+
+    -moz-box-shadow: 0px 2px 5px 0px #4A4A4A inset;
+    -webkit-box-shadow: 0px 1px 5px 0px #4A4A4A inset;
+    box-shadow: 0px 1px 5px #4A4A4A inset;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#OS2_armurerie.purple #statsPerso #statsPanel .stati span {
+    display: inline-block;
+    width: 100%;
+}
+#OS2_armurerie.purple #statsPerso #statsPanel .stati img {
+    float: left;
+    height: 20px;
+}
+#OS2_armurerie.purple #statsPerso #statsPanel #copyright {
+    margin-top: 20px;
+}
+#OS2_armurerie.purple #statsPerso #statsPanel #copyright a {
+    text-decoration: none;
+}
+#OS2_armurerie.purple #statsPerso #statsPanel #copyright p {
+    width: 100%;
+    margin: 2px;
+    
+    text-align: center;
+    font-size: 0.8em;
+    color: rgb(96, 81, 99);
+    
+    text-decoration: none;
+    
+    -moz-transition-property: color;
+	-webkit-transition-property: color;
+	-o-transition-property: color;
+        /* La transition durera trois secondes. */
+        -moz-transition-duration: 0.5s;
+	    -webkit-transition-duration: 0.5s;
+	    -o-transition-duration: 0.5s;
+}
+#OS2_armurerie.purple #statsPerso #statsPanel #copyright p:hover {
+    color: #d3d3d3;
+}
+
+/* --------------------------------------------------------- */
+

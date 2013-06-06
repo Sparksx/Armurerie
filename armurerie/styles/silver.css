@@ -1,0 +1,455 @@
+@font-face {
+	font-family: BebasNeue;
+	src: url('polices/BebasNeue.otf');
+}
+
+@font-face {
+	font-family: Myriadpro;
+	src: url('polices/MYRIADPRO-REGULAR.OTF');
+}
+
+@font-face {
+	font-family: Asafeplacetofall;
+	src: url('polices/ASafePlacetoFall.ttf');
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+
+#recherche.silver {
+	width: 600px;
+	height: 35px;
+	
+	padding-top: 15px;
+	
+	margin: auto;
+	text-align: center;
+	
+	-webkit-border-radius: 8px 0 8px 0;
+       -moz-border-radius: 8px 0 8px 0;
+            border-radius: 8px 0 8px 0;
+	
+	background-color: #f5f5f5;
+    background-color: #e6e6e6;
+    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+	
+	color: #333333;
+	
+	-moz-box-shadow: 0px 2px 5px 0px #4A4A4A;
+	-webkit-box-shadow: 0px 1px 5px 0px #4A4A4A;
+	box-shadow: 0px 1px 5px 0px #4A4A4A;
+}
+#recherche.silver #cherche {
+	-webkit-border-radius: 0 4px 0 4px;
+       -moz-border-radius: 0 4px 0 4px;
+            border-radius: 0 4px 0 4px;
+}
+
+#resultRecherche.silver {
+    background-color: #f5f5f5;
+    background-color: #e6e6e6;
+    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+}
+#resultRecherche.silver a {
+    color: #333333;
+}
+#resultRecherche.silver p {
+    color: #333333;
+}
+/* ---------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+
+#OS2_armurerie.silver .vueArmurerie {
+    border: 1px solid white;
+    border-top: none;
+
+    -moz-box-shadow: 0px 2px 5px 0px #4A4A4A;
+    -webkit-box-shadow: 0px 1px 5px 0px #4A4A4A;
+    box-shadow: 0px 1px 5px 0px #4A4A4A;
+}
+
+#OS2_armurerie.silver #infosPerso {
+    width: 100%;
+    margin: auto;
+
+    background-color: #f5f5f5;
+    background-color: #e6e6e6;
+    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+
+    color: #333333;
+    
+    -moz-transition-property: color;
+	-webkit-transition-property: color;
+	-o-transition-property: color;
+        /* La transition durera trois secondes. */
+        -moz-transition-duration: 0.5s;
+	    -webkit-transition-duration: 0.5s;
+	    -o-transition-duration: 0.5s;
+}
+
+#OS2_armurerie.silver #infosPerso .avatar {
+    float: left;
+    margin: 5px;
+
+    height: 80px;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#OS2_armurerie.silver #infosPerso div {
+    height: 20px;
+
+    margin-top: 3px;
+}
+
+#OS2_armurerie.silver #infosPerso #name {
+    width: 410px;
+    margin: auto;
+
+    display: inline-block;
+
+    text-align: center;
+    vertical-align: middle;
+
+    font-family: BebasNeue, Georgia;
+    font-size: 1.3em;
+    
+    -moz-transition-property: color;
+	-webkit-transition-property: color;
+	-o-transition-property: color;
+        /* La transition durera trois secondes. */
+        -moz-transition-duration: 0.5s;
+	    -webkit-transition-duration: 0.5s;
+	    -o-transition-duration: 0.5s;
+}
+#OS2_armurerie.silver #infosPerso #niveau {
+    width: 500px;
+    height: 50px;
+
+    font-family: Myriadpro, Georgia;
+
+    display: inline-block;
+
+    vertical-align: middle;
+}
+#OS2_armurerie.silver #infosPerso #niveau .right {
+    float: right;
+}
+#OS2_armurerie.silver #infosPerso #extBarre {
+    width: 100%;
+    height: 20px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 1px solid black;
+
+    overflow:  hidden;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    background-color: #f5f5f5;
+    background-color: #e6e6e6;
+    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+}
+#OS2_armurerie.silver #infosPerso #intBarre {
+    height: 20px;
+
+    text-align: center;
+    vertical-align: middle;
+
+    color: #2c2c2c;
+
+    margin: 0;
+    padding: 0;
+    
+    background-color: #5bb75b;
+    background-color: #51a351;
+    background-image: -ms-linear-gradient(left, #62c462, #51a351);
+    background-image: -webkit-linear-gradient(left, #62c462, #51a351);
+    background-image: -o-linear-gradient(left, #62c462, #51a351);
+    background-image: -moz-linear-gradient(left, #62c462, #51a351);
+    background-image: linear-gradient(left, #62c462, #51a351);
+    background-repeat: repeat-x;
+}
+#OS2_armurerie.silver #infosPerso #titre {
+    width: 500px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+
+    display: inline-block;
+
+    font-size: 0.9em;
+    font-family: Asafeplacetofall, Georgia;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+
+#OS2_armurerie.silver #statsPerso {
+    display: table;
+}
+
+#OS2_armurerie.silver #statsPerso #armurerie {
+    display: table-cell;
+
+    width: 440px;
+    height: 100%;
+
+    padding-bottom: 10px;
+    background-color: rgb(250, 250, 250);
+    -moz-box-shadow: 0px 2px 5px 0px #4A4A4A inset;
+    -webkit-box-shadow: 0px 1px 5px 0px #4A4A4A inset;
+    box-shadow: 0px 1px 5px #4A4A4A inset;
+}
+#OS2_armurerie.silver #statsPerso #statsPanel {
+    display: table-cell;
+
+    width: 170px;
+    height: 100%;
+
+    background-color: #e6e6e6;
+
+    color: white;
+}
+#OS2_armurerie.silver #statsPerso #statsPanel.right {
+    border-left: 3px solid rgb(240, 240, 240);
+}
+#OS2_armurerie.silver #statsPerso #statsPanel.left {
+    border-right: 3px solid rgb(240, 240, 240);
+}
+
+
+#OS2_armurerie.silver #statsPerso #armurerie #dofus {
+    display: inline-block;
+
+    position: relative;
+    top: -15px;
+
+    width: 50px;
+}
+#OS2_armurerie.silver #statsPerso #armurerie #dofus .dof {
+    width: 43px;
+    height: 43px;
+    margin: 3px;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+#OS2_armurerie.silver #statsPerso #armurerie #dofus .dof img {
+    max-width: 43px;
+    max-height: 43px;
+}
+
+#OS2_armurerie.silver #statsPerso #armurerie #onPerso {
+    display: inline-block;
+
+    width: 300px;
+    height: 300px;
+    
+    position: relative;
+    top: -10px;
+
+    margin-left: 5px;
+    margin-right: 5px;
+
+    border: 1px solid rgb(150,150,150);
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    background-image: url("/armurerie/images/personnages/nobody.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 134px 300px;
+}
+#OS2_armurerie.silver #statsPerso #armurerie #itemRight {
+    display: inline-block;
+
+    position: relative;
+    top: -120px;
+
+    width: 63px;
+}
+#OS2_armurerie.silver #statsPerso #armurerie .item {
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    border: 1px solid rgb(150,150,150);
+
+    opacity: 0.8;
+
+    background-color: #f5f5f5;
+    background-color: #e6e6e6;
+    background-image: -ms-radial-gradient(#f5f5f5, #e6e6e6);
+    background-image: -webkit-radial-gradient(#f5f5f5, #e6e6e6);
+    background-image: -o-radial-gradient(#f5f5f5, #e6e6e6);
+    background-image: radial-gradient(#f5f5f5, #e6e6e6);
+    background-image: -moz-radial-gradient(#f5f5f5, #e6e6e6);
+
+    /* 50% 50%, circle, cover,  */
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#OS2_armurerie.silver #statsPerso #armurerie .item img {
+    width: 40px;
+    height: 40px;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#OS2_armurerie.silver #statsPerso #armurerie #itemRight .item {
+    margin: 10px 0;
+}
+#OS2_armurerie.silver #statsPerso #armurerie #onPerso .item {
+    position: relative;
+}
+#OS2_armurerie.silver #statsPerso #armurerie #onPerso .pos15 {
+    top: 25px;
+    left: 50px;
+
+    width: 50px;
+    height: 50px;
+}
+#OS2_armurerie.silver #statsPerso #armurerie #onPerso .pos1 {
+    top: -25px;
+    left: 210px;
+
+    width: 50px;
+    height: 50px;
+}
+#OS2_armurerie.silver #statsPerso #armurerie #onPerso .pos1 img, #OS2_armurerie.silver #statsPerso #armurerie #onPerso .pos15 img {
+    width: 50px;
+    height: 50px;
+}
+#OS2_armurerie.silver #statsPerso #armurerie #onPerso .pos0 {
+    top: -20px;
+    left: 130px;
+}
+#OS2_armurerie.silver #statsPerso #armurerie #onPerso .pos2 {
+    top: 10px;
+    left: 80px;
+}
+#OS2_armurerie.silver #statsPerso #armurerie #onPerso .pos3 {
+    top: -25px;
+    left: 130px;
+}
+#OS2_armurerie.silver #statsPerso #armurerie #onPerso .pos4 {
+    top: -75px;
+    left: 180px;
+}
+#OS2_armurerie.silver #statsPerso #armurerie #onPerso .pos5 {
+    top: -20px;
+    left: 130px;
+}
+
+/* --------------------------------------------------------- */
+
+#OS2_armurerie.silver #statsPerso #statsPanel .titre {
+    font-family: Myriadpro, Georgia;
+    font-size: 1.2em;
+}
+#OS2_armurerie.silver #statsPerso #statsPanel .stati {
+    width: 160px;
+    height: 20px;
+
+    margin: 8px auto;
+
+    text-align: center;
+
+    background-color: #f5f5f5;
+    color: #333333;
+
+    -moz-box-shadow: 0px 2px 5px 0px #4A4A4A inset;
+    -webkit-box-shadow: 0px 1px 5px 0px #4A4A4A inset;
+    box-shadow: 0px 1px 5px #4A4A4A inset;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#OS2_armurerie.silver #statsPerso #statsPanel .stati span {
+    display: inline-block;
+    width: 100%;
+}
+#OS2_armurerie.silver #statsPerso #statsPanel .stati img {
+    float: left;
+    height: 20px;
+}
+#OS2_armurerie.silver #statsPerso #statsPanel #copyright {
+    margin-top: 20px;
+}
+#OS2_armurerie.silver #statsPerso #statsPanel #copyright a {
+    text-decoration: none;
+}
+#OS2_armurerie.silver #statsPerso #statsPanel #copyright p {
+    width: 100%;
+    margin: 2px;
+    
+    text-align: center;
+    font-size: 0.8em;
+    color: #d3d3d3;
+    
+    text-decoration: none;
+    
+    -moz-transition-property: color;
+	-webkit-transition-property: color;
+	-o-transition-property: color;
+        /* La transition durera trois secondes. */
+        -moz-transition-duration: 0.5s;
+	    -webkit-transition-duration: 0.5s;
+	    -o-transition-duration: 0.5s;
+}
+#OS2_armurerie.silver #statsPerso #statsPanel #copyright p:hover {
+    color: rgb(48, 47, 43);
+}
+
+/* --------------------------------------------------------- */
