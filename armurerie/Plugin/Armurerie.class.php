@@ -271,7 +271,7 @@ class Armurerie extends Securisation {
     }
     private function closeShowRecherche() {
         
-        $html .= '</div>';
+        $html = '</div>';
         
         return $html;
     }

@@ -48,9 +48,7 @@ le fichier `/sql/updateItemTemplate.sql`
 Placez le dossier `/armurerie/` et tout son contenu à la RACINE de votre domaine       
 3ème étape :        
 Avant le début du code html ajoutez :          
-	`<?php          
-	include_once('/armurerie/loadArmurerie.php');       
-	?>`          
+`<?php include_once('/armurerie/loadArmurerie.php'); ?>`        
 
 Utilisation
 -----------
