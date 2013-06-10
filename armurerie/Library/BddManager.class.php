@@ -104,7 +104,7 @@ class BddManager extends Securisation {
             
             $requete = $this->getDb()->prepare('SELECT * FROM personnages 
             WHERE 
-            name LIKE "%'.$st.'%"
+            name LIKE "%'.$this->secu($st).'%"
             LIMIT 0,'.$this->OS2['nbResultSearch']);
             $requete->execute();
             $personnages = $requete->fetchAll();

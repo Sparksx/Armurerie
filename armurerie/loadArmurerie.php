@@ -1,25 +1,36 @@
 <?php
 
-$pathToDossierArmurerie = '';
+$pathToDossierArmurerie = 'armurerie/';
 
 //error_reporting( E_ALL);
 //header('Content-type: text/html; charset=utf-8');
 $OS2 = array();
 
 
-require $pathToDossierArmurerie.'armurerie/params/define.php';
-require $pathToDossierArmurerie.'armurerie/params/config.php';
+require $pathToDossierArmurerie.'params/define.php';
+require $pathToDossierArmurerie.'params/config.php';
+
+
+echo '<link rel="stylesheet" href="'.$pathToDossierArmurerie.'styles/qtip.css" />';
+echo '<link rel="stylesheet" href="'.$pathToDossierArmurerie.'styles/static.css" />';
+
+echo '<script type="text/javascript" src="'.$pathToDossierArmurerie.'jQuery/jquery.min.js"></script>';
+echo '<script type="text/javascript" src="'.$pathToDossierArmurerie.'jQuery/jquery.qtip.min.js"></script>';
+echo '<script type="text/javascript" src="'.$pathToDossierArmurerie.'jQuery/jQuery-OS2.js"></script>';
+echo '<script type="text/javascript" src="'.$pathToDossierArmurerie.'jQuery/jQuery-silver.js"></script>';
 
 
 
-
+function edebug($var, $echo = true) {
+	Armurerie::debug($var, $echo);
+}
 
 function __autoload($class) {
 	global $pathToDossierArmurerie;
 	
 	$repertoires = array(
-		$pathToDossierArmurerie.'armurerie/Library/',
-		$pathToDossierArmurerie.'armurerie/Plugin/'
+		$pathToDossierArmurerie.'Library/',
+		$pathToDossierArmurerie.'Plugin/'
 	);
 	
 	foreach ($repertoires as $repertoire) {
@@ -32,3 +43,4 @@ function __autoload($class) {
 }
 
 $GLOBALS['armurerie'] = new Armurerie($OS2);
+

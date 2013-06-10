@@ -1,106 +1,95 @@
 $(function() {
-    $('#OS2_armurerie.silver .tooltip').each(function(){
+    $('#OS2_armurerie .tooltip').each(function(){
         if($(this).data("qtip")) $(this).qtip("destroy");
         $(this).qtip({
             content: {
                 text: $(this).attr('title')
             },
-            style: {
-                width: 180,
-                textAlign: 'center',
-                tip: 'topMiddle',
-                background: '#FAFAFA',
-                border: {
-                    color: '#9a9a9a'
-                },
-                name: 'light'
-            },
             position: {
-                corner: {
-                    target: 'bottomMiddle',
-                    tooltip: 'topMiddle'
-                }
+                at: 'bottom center',
+                my: 'top center'
+                
             }
+//            style: {
+//                width: 180,
+//                textAlign: 'center',
+//                tip: 'topMiddle',
+//                background: '#FAFAFA',
+//                border: {
+//                    color: '#9a9a9a'
+//                },
+//                name: 'light'
+//            }
         });
     });
-    
-    
-    // Tooltip de la barre d'xp'
-    $('#OS2_armurerie.silver #infosPerso #niveau[tooltip]').each(function(){
+//    
+//    
+//    // Tooltip de la barre d'xp'
+    $('#OS2_armurerie #infosPerso #niveau[tooltip]').each(function(){
         if($(this).data("qtip")) $(this).qtip("destroy");
         $(this).qtip({
             content: {
                 text : $('#popStats #'+$(this).attr('tooltip')+':first')
             },
             position: {
-                corner: {
-                    target: 'bottomMiddle',
-                tooltip: 'topMiddle'
-                }
+				at: 'bottom center',
+				my: 'top center'
             },
             style: {
-                width: 520,
-                padding: 5,
-                tip: 'topMiddle',
-                color: 'black',
-                background: '#FAFAFA',
-                border: {
-                    color: '#9a9a9a'
-                },
-                name: 'dark'
+				widget: false,
+				def: false,
+				classes: 'OS2popStatsGlobalPerso'
             }
         });
     });
-    
-    
-    // On affiche les pops des dofus a droite
-    $('#OS2_armurerie.silver #armurerie #dofus div[tooltip]').each(function(){
+//    
+//    
+//    // On affiche les pops des dofus a droite
+    $('#OS2_armurerie #armurerie #dofus div[tooltip]').each(function(){
         if($(this).data("qtip")) $(this).qtip("destroy");
         $(this).qtip({
             content: {
                 text : $('#statsItem #b'+$(this).attr('tooltip')+':first')
             },
             position: {
-                corner: {
-                    target: 'rightMiddle',
-                    tooltip: 'leftMiddle'
-                }
-            },
-            style: {
-                width: 370,
-                padding: 5,
-                tip: 'leftMiddle',
-                background: '#FAFAFA',
-                border: {
-                    color: '#9a9a9a'
-                },
-                name: 'light'
+				at : 'right center',
+				my : 'left center'
             }
+//            style: {
+//                width: 370,
+//                padding: 5,
+//                tip: 'leftMiddle',
+//                background: '#FAFAFA',
+//                border: {
+//                    color: '#9a9a9a'
+//                },
+//                name: 'light'
+//            }
         });
     });
-    // on affiche les autres pops a gauche
-    $('#OS2_armurerie.silver #armurerie #onPerso div[tooltip], #OS2_armurerie.silver #armurerie #itemRight div[tooltip]').each(function(){
+//    
+//    
+//    // on affiche les autres pops a gauche
+    $('#OS2_armurerie #armurerie #onPerso div[tooltip], #OS2_armurerie #armurerie #itemRight div[tooltip]').each(function(){
         if($(this).data("qtip")) $(this).qtip("destroy");
         $(this).qtip({
             content: {
                 text : $('#statsItem #b'+$(this).attr('tooltip')+':first')
             },
             position: {
-                corner: {
-                    target: 'leftMiddle',
-                    tooltip: 'rightMiddle'
-                }
-            },
-            style: {
-                width: 370,
-                padding: 5,
-                tip: 'rightMiddle',
-                background: '#FAFAFA',
-                border: {
-                    color: '#9a9a9a'
-                },
-                name: 'light'
+				at: 'left center',
+				my: 'right center'
             }
+//            style: {
+//                width: 370,
+//                padding: 5,
+//                tip: 'rightMiddle',
+//                background: '#FAFAFA',
+//                border: {
+//                    color: '#9a9a9a'
+//                },
+//                name: 'light'
+//            }
         });
     });
 });

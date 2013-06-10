@@ -235,6 +235,7 @@ class Stats {
                 if (hexdec($bonus[2]) == 0) {
                     $valueBonus = hexdec($bonus[1]);
                 } else {
+					$valueBonus = array();
                     $valueBonus[0] = hexdec($bonus[1]);
                     $valueBonus[1] = hexdec($bonus[2]);
                 }

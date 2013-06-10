@@ -24,6 +24,12 @@ class Armurerie extends Securisation {
         $this->sendRequest();
         self::$instances++;
     }
+	
+	public static function edebug($var, $echo) {
+		$s = "<pre>".print_r($var, true)."</pre>";
+		if(!$echo) return $s;
+		echo $s;
+	}
     
     // -------------------------------------------------------------------------
     // Fonctions publique
@@ -82,22 +88,7 @@ class Armurerie extends Securisation {
         
         $resultSearch = '';
         
-//        if($param == -2) {
-//            if($compte) {
-//                
-//            }
-//            else {
-//                
-//            }
-//        }
-//        elseif($param == -1) {
-//            
-//        }
-//        else {
-            $this->load($param, $compte);
-//        }
-        
-        //--------
+		$this->load($param, $compte);
         
         
         if($this->OS2['rechercheMod']) {
@@ -126,62 +117,16 @@ class Armurerie extends Securisation {
         }
         
         
-        
-        
-//        if(!empty($this->compte)) {
-//            foreach($this->compte as $compt) {
-//                if(count($compt->getAllPerso()) > 1) {
-//                    $html .= '<div id="nextSlide"><img src="/armurerie/images/previous.jpg" alt="Previous" /></div>';
-//                    $html .= '<div id="slider">';
-//                        $html .= '<div id="slides">';
-//                            foreach($compt->getAllPerso() as $personnage)
-//                                    $html .= $this->creatArmurerie($personnage);
-//                        $html .= '</div>';
-//                    $html .= '</div>';
-//                    $html .= '<div id="prevSlide"><img src="/armurerie/images/next.jpg" alt="Next" /></div>';
-//                }
-//                else {
-//                    $html .= '<div id="onePerso">';
-//                        foreach($compt->getAllPerso() as $personnage)
-//                                $html .= $this->creatArmurerie($personnage);
-//                    $html .= '</div>';
-//                }
-//            }
-//        }
-        
-        
         if(!empty($this->personnage) || !empty($this->compte)) {
-            if(count($this->personnage) > 1 || count($this->compte) > 0) {
-                $html .= '<div id="nextSlide"><img src="/armurerie/images/previous.jpg" alt="Previous" /></div>';
-                $html .= '<div id="slider">';
-                    $html .= '<div id="slides">';
-                        if(!empty($this->personnage)) {
-                            foreach($this->personnage as $personnage) {
-                                $html .= $this->creatArmurerie($personnage);
-                            }
-                        }
-                        if(!empty($this->compte)) {
-                            foreach($this->compte as $compt) {
-                                foreach($compt->getAllPerso() as $personnage)
-                                    $html .= $this->creatArmurerie($personnage);
-                            }
-                        }
-                    $html .= '</div>';
-                $html .= '</div>';
-                $html .= '<div id="prevSlide"><img src="/armurerie/images/next.jpg" alt="Next" /></div>';
-            }
-            else {
-                $html .= '<div id="onePerso">';
-                    foreach($this->personnage as $personnage) {
-                        $html .= $this->creatArmurerie($personnage);
-                    }
-                $html .= '</div>';
-            }
+			$html .= '<div id="onePerso">';
+				foreach($this->personnage as $personnage) {
+					$html .= $this->creatArmurerie($personnage);
+				}
+			$html .= '</div>';
         }
         
         
         $html .= $this->closeArmurerie();
-        $html .= $this->insertjQuery();
         
         return $html;
     }
@@ -200,16 +145,10 @@ class Armurerie extends Securisation {
         $html .= $this->setBandeau($personnage);
 
         $html .= $this->startCentre();
-        if($this->OS2['posColStats'] == 'left') {
-            $html .= $this->setColonneStats($personnage);
-            $html .= $this->setViewItem($personnage);
-        }
-        elseif($this->OS2['posColStats'] == 'right') {
-            $html .= $this->setViewItem($personnage);
-            $html .= $this->setColonneStats($personnage);
-        }
-        else
-            throw new Exception('La valeur de la variable posColStats doit être "right" ou "left" (modifiable en config)');
+		
+        $html .= $this->setViewItem($personnage);
+        $html .= $this->setColonneStats($personnage);
+		
         $html .= $this->endCentre();
 
         $html .= $this->setPopItem($personnage);
@@ -222,7 +161,7 @@ class Armurerie extends Securisation {
         if(!isset($persoFind))
             throw new Exception('Le paramètre doit être déclaré');
         
-        $html .= $this->openShowRecherche();
+        $html = $this->openShowRecherche();
         
         if(count($persoFind) == 0)
             $html .= '<p class="noResult">Auncun résultat trouvé pour "'.$_GET['tx'].'"</p>';
@@ -236,10 +175,7 @@ class Armurerie extends Securisation {
     }
     
     private function setRecherche() {
-        if(!empty($_COOKIE['style']) && in_array($_COOKIE['style'], $this->OS2['themes']))
-            $html = '<div id="recherche" class="'.$_COOKIE['style'].'">';
-        else
-            $html = '<div id="recherche" class="'.$this->OS2['themeArm'].'">';
+        $html = '<div id="recherche">';
         $html .=    '<form method="GET" action="'.$this->curPageURL().'">';
         $html .=        '<label for="cherche">Vous cherchez quelqu\'un ?</label>&nbsp;<input type="text" name="tx" id="cherche" maxlength="20" size="20" placeholder="Jean Jacques" />&nbsp;<input type="submit" value="Valider" />';
         $html .=    '</form>';
@@ -250,10 +186,7 @@ class Armurerie extends Securisation {
     
     
     private function openShowRecherche() {
-        if(!empty($_COOKIE['style']) && in_array($_COOKIE['style'], $this->OS2['themes']))
-            $html = '<div id="resultRecherche" class="'.$_COOKIE['style'].'">';
-        else
-            $html = '<div id="resultRecherche" class="'.$this->OS2['themeArm'].'">';
+        $html = '<div id="resultRecherche">';
         
         return $html;
     }
@@ -337,6 +270,8 @@ class Armurerie extends Securisation {
 
         return $html;
     }
+	
+	
     private function setColonneStats($personnage = null) {
         if(!($personnage instanceof Personnage))
             throw new Exception('Le paramètre doit être déclaré et une instance de la classe Personnage');
@@ -366,6 +301,8 @@ class Armurerie extends Securisation {
 
         return $html;
     }
+	
+	
     private function setViewItem($personnage = null) {
         if(!($personnage instanceof Personnage))
             throw new Exception('Le paramètre doit être déclaré et une instance de la classe Personnage');
@@ -454,10 +391,7 @@ class Armurerie extends Securisation {
         return $html;
     }
     private function openArmurerie() {
-        if(!empty($_COOKIE['style']) && in_array($_COOKIE['style'], $this->OS2['themes']))
-            $html = '<div id="OS2_armurerie" class="'.$_COOKIE['style'].'">';
-        else
-            $html = '<div id="OS2_armurerie" class="'.$this->OS2['themeArm'].'">';
+        $html = '<div id="OS2_armurerie">';
 
         return $html;
     }
@@ -476,18 +410,7 @@ class Armurerie extends Securisation {
 
         return $html;
     }
-    private function insertjQuery() {
-        $html = '<script type="text/javascript" src="/armurerie/jQuery/jquery.min.js"></script>';
-        $html .= '<script type="text/javascript" src="/armurerie/jQuery/jquery.qtip.min.js"></script>';
-        $html .= '<script type="text/javascript" src="/armurerie/jQuery/jQuery-OS2.js"></script>';
-        $html .= '<script type="text/javascript" src="/armurerie/jQuery/jQuerySlider.js"></script>';
-        if(!empty($_COOKIE['style']) && in_array($_COOKIE['style'], $this->OS2['themes']))
-            $html .= '<script type="text/javascript" src="/armurerie/jQuery/jQuery-'.$_COOKIE['style'].'.js"></script>';
-        else
-            $html .= '<script type="text/javascript" src="/armurerie/jQuery/jQuery-'.$this->OS2['themeArm'].'.js"></script>';
-        
-        return $html;
-    }
+	
     private function startCentre() {
         $html = '<div id="statsPerso">';
 
@@ -523,6 +446,11 @@ class Armurerie extends Securisation {
             return 'Pas de titre';
     }
 
+	
+	
+	
+	
+	
     private function haveMaj() {
         $lastVer = $this->UrlGetContentsCurl("http://plugins.fraternity-serveur.eu/armurerie/?version", 2, true);
         if(!$lastVer)
