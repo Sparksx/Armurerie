@@ -76,10 +76,11 @@ try {
 }    
 
 Astuce :    
-$GLOBALS['armurerie']->load(361);
-echo $GLOBALS['armurerie']->show();
-Reviens à faire :
-echo $GLOBALS['armurerie']->show(361);
+$GLOBALS['armurerie']->load(361);      
+echo $GLOBALS['armurerie']->show();      
+      
+Reviens à faire :       
+echo $GLOBALS['armurerie']->show(361);      
 
 
 Contact
