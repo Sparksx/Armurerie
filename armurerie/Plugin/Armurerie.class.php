@@ -8,6 +8,9 @@
 class Armurerie extends Securisation {
     
     private static $instances = 0;
+	private static $_v = '1.3.0';
+	private static $_lienCom = '';
+	
     private $personnage = array();
     private $compte = array();
     private $baseDeDonnee = null;
@@ -90,7 +93,6 @@ class Armurerie extends Securisation {
         
 		$this->load($param, $compte);
         
-        
         if($this->OS2['rechercheMod']) {
             if(isset($_GET['tx']) && !empty($_GET['tx'])) {
                 $ret = $this->baseDeDonnee->searchPersonnage($_GET['tx']);
@@ -127,7 +129,7 @@ class Armurerie extends Securisation {
         
         
         $html .= $this->closeArmurerie();
-        
+		
         return $html;
     }
     
@@ -191,11 +193,13 @@ class Armurerie extends Securisation {
         return $html;
     }
     private function showRecherche($perso) {
+		global $pathToDossierArmurerie;
+		
         $url = stristr($this->curPageURL(), "tx=", true);
         
         $html = '<a href="'.$url.'tx='.$perso['name'].'">';
         $html .=    '<div class="affResult">';
-        $html .=        '<img src="/armurerie/images/avatar/'.$perso['class'].$perso['sexe'].'.jpg" />';
+        $html .=        '<img src="'.$pathToDossierArmurerie.'images/avatar/'.$perso['class'].$perso['sexe'].'.jpg" />';
         $html .=        '<p>'.  ucfirst($perso['name']).' - Niveau '.$perso['level'].'</p>';
         $html .=    '</div>';
         $html .= '</a>';
@@ -210,6 +214,8 @@ class Armurerie extends Securisation {
     }
 
     private function setBandeau($personnage = null) {
+		global $pathToDossierArmurerie;
+		
         if(!($personnage instanceof Personnage))
             throw new Exception('Le paramètre doit être déclaré et une instance de la classe Personnage');
         
@@ -223,10 +229,10 @@ class Armurerie extends Securisation {
         
         $html =     '<div id="infosPerso">';
         
-        $html .=        '<img src="/armurerie/images/avatar/'.$personnage->getClass().$personnage->getSexe().'.jpg" title="'.$personnage->getName().'" class="avatar" />';
+        $html .=        '<img src="'.$pathToDossierArmurerie.'images/avatar/'.$personnage->getClass().$personnage->getSexe().'.jpg" title="'.$personnage->getName().'" class="avatar" />';
         $html .=        '<div id="personnalisation">';
                         if($this->maj !== false)
-        $html .=            '<a href="http://armurerie.sparks.great-heberg.eu" target="_blank"><img src="/armurerie/images/elements/maintenance.png" class="tooltip" title="Version actuel : '.$this->OS2['version'].' - Mise à jour disponible : '.$this->maj.'" alt="Maj dispo" /></a>';
+        $html .=            '<a href="'.self::$_lienCom.'" target="_blank"><img src="'.$pathToDossierArmurerie.'images/elements/maintenance.png" class="tooltip" title="Version actuel : '.$this->OS2['version'].' - Mise à jour disponible : '.$this->maj.'" alt="Maj dispo" /></a>';
         
                         foreach($this->OS2['themes'] as $theme) {
         $html .=            '<div class="'.$theme.'">';
@@ -273,6 +279,8 @@ class Armurerie extends Securisation {
 	
 	
     private function setColonneStats($personnage = null) {
+		global $pathToDossierArmurerie;
+		
         if(!($personnage instanceof Personnage))
             throw new Exception('Le paramètre doit être déclaré et une instance de la classe Personnage');
         
@@ -286,14 +294,14 @@ class Armurerie extends Securisation {
                 foreach($this->OS2['statsBase'] as $type) {
         $html .=    '<p class="stati">';
         $html .=        '<span class="tooltip" title="'.ucfirst($type).' : '.$personnage->getStatsBase($type).' + '.$personnage->getStatsEquipe($type).'">';
-        $html .=            '<img src="/armurerie/images/elements/'.$type.'.png" alt="'.ucfirst($type).'" />';
+        $html .=            '<img src="'.$pathToDossierArmurerie.'images/elements/'.$type.'.png" alt="'.ucfirst($type).'" />';
         $html .=            ''.$personnage->getStatsTotal($type).'';
         $html .=        '</span>';
         $html .=    '</p>';
                 }
                 
         $html .=    '<div id="copyright">';
-        $html .=        '<a href="http://sparks.great-heberg.eu" target="_blank"><p>Par Sparks ©</p></a>';
+        $html .=        '<a href="'.self::$_lienCom.'" target="_blank"><p>Par Sparks ©</p></a>';
         $html .=        '<p>Pour '.$this->OS2['nameServer'].'</p>';
         $html .=        '<p style="font-size:0.6em;">V'.$this->OS2['version'].'</p>';
         $html .=    '</div>';
@@ -304,6 +312,8 @@ class Armurerie extends Securisation {
 	
 	
     private function setViewItem($personnage = null) {
+		global $pathToDossierArmurerie;
+		
         if(!($personnage instanceof Personnage))
             throw new Exception('Le paramètre doit être déclaré et une instance de la classe Personnage');
         
@@ -315,12 +325,12 @@ class Armurerie extends Securisation {
                     $item = $personnage->getItemPos($pos);
                     if($item != NULL) {
         $html .=        '<div class="item dof" tooltip="'.$item->getGuid().'">';
-        $html .=            '<img src="/armurerie/images/Gfx/'.$item->getType().'/'.$item->getGfx().'.png" />';
+        $html .=            '<img src="'.$pathToDossierArmurerie.'images/Gfx/'.$item->getType().'/'.$item->getGfx().'.png" />';
         $html .=        '</div>';
                     }
                     else {
         $html .=        '<div class="item dof" tooltip="">';
-        $html .=            '<img src="/armurerie/images/Gfx/1/vide.png" />';
+        $html .=            '<img src="'.$pathToDossierArmurerie.'images/Gfx/1/vide.png" />';
         $html .=        '</div>';
                     }
                 }
@@ -331,12 +341,12 @@ class Armurerie extends Securisation {
                     $item = $personnage->getItemPos($pos);
                     if($item != NULL) {
         $html .=        '<div class="item pos'.$pos.'" tooltip="'.$item->getGuid().'">';
-        $html .=            '<img src="/armurerie/images/Gfx/'.$item->getType().'/'.$item->getGfx().'.png" />';
+        $html .=            '<img src="'.$pathToDossierArmurerie.'images/Gfx/'.$item->getType().'/'.$item->getGfx().'.png" />';
         $html .=        '</div>';
                     }
                     else {
         $html .=        '<div class="item pos'.$pos.'" tooltip="">';
-        $html .=            '<img src="/armurerie/images/Gfx/1/vide.png" />';
+        $html .=            '<img src="'.$pathToDossierArmurerie.'images/Gfx/1/vide.png" />';
         $html .=        '</div>';
                     }
                 }
@@ -347,12 +357,12 @@ class Armurerie extends Securisation {
                     $item = $personnage->getItemPos($pos);
                     if($item != NULL) {
         $html .=        '<div class="item pos'.$pos.'" tooltip="'.$item->getGuid().'">';
-        $html .=            '<img src="/armurerie/images/Gfx/'.$item->getType().'/'.$item->getGfx().'.png" />';
+        $html .=            '<img src="'.$pathToDossierArmurerie.'images/Gfx/'.$item->getType().'/'.$item->getGfx().'.png" />';
         $html .=        '</div>';
                     }
                     else {
         $html .=        '<div class="item pos'.$pos.'" tooltip="">';
-        $html .=            '<img src="/armurerie/images/Gfx/1/vide.png" />';
+        $html .=            '<img src="'.$pathToDossierArmurerie.'images/Gfx/1/vide.png" />';
         $html .=        '</div>';
                     }
                 }
@@ -363,24 +373,26 @@ class Armurerie extends Securisation {
         return $html;
     }
     private function setPopItem($personnage = null) {
+		global $pathToDossierArmurerie;
+		
         if(!($personnage instanceof Personnage))
             throw new Exception('Le paramètre doit être déclaré et une instance de la classe Personnage');
         
         $html = '<div id="statsItem" style="display:none;">';
                 foreach ($personnage->getObjets() as $item) {
                     $pano = '';
-                    if($item->getPanoplie() instanceof Panoplie)
-                        $pano = ' style="color:#598f96;"';
+//                    if($item->getPanoplie() instanceof Panoplie)
+//                        $pano = ' style="color:#598f96;"';
         $html .=    '<div class="itemStats" id="b'.$item->getGuid().'">';
-        $html .=        '<div class="nameItem" style="width:350px;text-align:center;font-size:1.2em;font-family:footer,Georgia;border-bottom:1px solid black;">';
+        $html .=        '<div class="nameItem" style="width:350px;text-align:center;height:22px;font-size:19px;font-family:footer,Georgia;border-bottom:1px solid black;">';
         $html .=            '<span '.$pano.'>';
         $html .=                ''.$item->getName().'';
         $html .=            '<span>';
         $html .=        '</div>';
-        $html .=        '<img src="/armurerie/images/Gfx/'.$item->getType().'/'.$item->getGfx().'.png" style="float:left;width:100px;" alt="Image manquante" />';
+        $html .=        '<img src="'.$pathToDossierArmurerie.'images/Gfx/'.$item->getType().'/'.$item->getGfx().'.png" style="float:left;width:100px;" alt="Image manquante" />';
         $html .=        '<div class="thisStats" style="display:inline-block;width:240px;height:100%;">';
                     foreach($item->getThisStats()->getAllStats() as $statsString)
-        $html .=            '<p class="staItm" style="width:100%;margin:2px 0;padding-left:10px;">' . $statsString . '</p>';
+        $html .=            '<p class="staItm" style="width:100%;margin:2px 0;padding-left:10px;font-size:16px;height:20px;">' . $statsString . '</p>';
         
         $html .=        '</div>';
         $html .=    '</div>';
@@ -447,22 +459,25 @@ class Armurerie extends Securisation {
     }
 
 	
-	
+	private function loadPalette() {
+		$test = $this->UrlGetContentsCurl($this->OS2['lienPalette'], 2, true);
+		edebug($test);
+	}
 	
 	
 	
     private function haveMaj() {
-        $lastVer = $this->UrlGetContentsCurl("http://plugins.fraternity-serveur.eu/armurerie/?version", 2, true);
+        $lastVer = $this->UrlGetContentsCurl(self::$_lienCom.'?version', 2, true);
         if(!$lastVer)
             return false;
-        if($lastVer > $this->OS2['version'])
+        if($lastVer > self::$_v)
             return $lastVer;
         return FALSE;
     }
 
     private function sendRequest() {
         $url = urlencode($_SERVER['SERVER_NAME']);
-        $req = $this->UrlGetContentsCurl('http://plugins.fraternity-serveur.eu/armurerie/?req='.$url, 2, false);
+        $req = $this->UrlGetContentsCurl(self::$_lienCom.'?req='.$url, 2, false);
         return true;
     }
     

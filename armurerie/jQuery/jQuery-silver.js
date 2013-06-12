@@ -9,17 +9,12 @@ $(function() {
                 at: 'bottom center',
                 my: 'top center'
                 
+            },
+            style: {
+				widget: false,
+				def: false,
+				classes: 'OS2popStatsPerso'
             }
-//            style: {
-//                width: 180,
-//                textAlign: 'center',
-//                tip: 'topMiddle',
-//                background: '#FAFAFA',
-//                border: {
-//                    color: '#9a9a9a'
-//                },
-//                name: 'light'
-//            }
         });
     });
 //    
@@ -54,17 +49,12 @@ $(function() {
             position: {
 				at : 'right center',
 				my : 'left center'
+            },
+            style: {
+				widget: false,
+				def: false,
+				classes: 'OS2popItems'
             }
-//            style: {
-//                width: 370,
-//                padding: 5,
-//                tip: 'leftMiddle',
-//                background: '#FAFAFA',
-//                border: {
-//                    color: '#9a9a9a'
-//                },
-//                name: 'light'
-//            }
         });
     });
 //    
@@ -79,17 +69,12 @@ $(function() {
             position: {
 				at: 'left center',
 				my: 'right center'
+            },
+            style: {
+				widget: false,
+				def: false,
+				classes: 'OS2popItems'
             }
-//            style: {
-//                width: 370,
-//                padding: 5,
-//                tip: 'rightMiddle',
-//                background: '#FAFAFA',
-//                border: {
-//                    color: '#9a9a9a'
-//                },
-//                name: 'light'
-//            }
         });
     });
 });

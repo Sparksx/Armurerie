@@ -22,7 +22,7 @@ echo '<script type="text/javascript" src="'.$pathToDossierArmurerie.'jQuery/jQue
 
 
 function edebug($var, $echo = true) {
-	Armurerie::debug($var, $echo);
+	Armurerie::edebug($var, $echo);
 }
 
 function __autoload($class) {

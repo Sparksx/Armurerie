@@ -15,7 +15,7 @@
         <?php
         try {
             //$GLOBALS['armurerie']->load(24, true);
-            echo $GLOBALS['armurerie']->show(24, true);
+            echo $GLOBALS['armurerie']->show(array(13, 5, 11, 12));
         } catch (Exception $e) {
             echo $e->__toString();
         }

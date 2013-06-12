@@ -12,17 +12,11 @@ inter-connexion permet de créer un décodage des items et des statistiques
 des personnages. La conception de cette classe permet une utilisation simple 
 et rapide.
 
-La class ne contient pas encore de méthode public mais cela tend à changer 
-afin de permettre une configuration optimal du rendu.
+Un rendu personnalisable est généré automatiquement à l'endroit ou vous voulez l'afficher    
 
-Les classes fonctionnent avec des lien absolu et part du principe que 
-votre site se trouve à la base de votre domaine (ou sous-domaine).         
-Exemple :        
-http://www.monsite.com/index.php  <- Fonctionne       
-http://www.monsite.com/site/index.php  <- Ne fonctionne pas       
 
-Fichiers
---------
+Fichiers principaux
+-------------------
 
 Tout les fichiers se trouvent dans le dossier /armurerie/ son appellation 
 seras donc omise ci-suivant.       
@@ -33,28 +27,34 @@ seras donc omise ci-suivant.
 * `/class/Panoplie.class.php`	Class décodant les panoplies        
 * `/class/Personnage.class.php`	Class décodant les personnages        
 * `/class/Stats.class.php`		Class décodant les statistiques (perso + item)        
-* `loadArmurerie.php`		Appel des class et fichiers de configuration        
-* `/params/config.php`		Fichier de configuration       
+* `loadArmurerie.php`			Appel des class et fichiers de configuration ; Ce fichier est à inclure dans la page ou vous utilisez l'armurerie                
+* `/params/config.php`			Fichier de configuration       
 
 Installation
------------
+------------
 
 L'installation de l'armurerie est simple :      
 
 1ere étape :       
-Si votre table item template ne contiens pas les gfx des items importez-y 
-le fichier `/sql/updateItemTemplate.sql`       
+Si votre table item template ne contient pas les gfx des items importez-y 
+le fichier `/sql/updateItemTemplate.sql`   
+             
 2ème étape :        
-Placez le dossier `/armurerie/` et tout son contenu à la RACINE de votre domaine       
+Placez le dossier `/armurerie/` et tout son contenu dans le ftp de votre site        
+         
 3ème étape :        
 Avant le début du code html ajoutez :          
-`<?php include_once('/armurerie/loadArmurerie.php'); ?>`        
+`<?php include_once('path/to/armurerie/loadArmurerie.php'); ?>`  (path/to/armurerie est bien évidement à changer)      
+
+4ème étape :        
+Dans le fichier `loadArmurerie.php` modifiez la variable `$pathToDossierArmurerie` afin qu'elle contienne le chemin relatif vers le dossier de l'armurerie
+par exemple : `$pathToDossierArmurerie = '../template/armurerie/';` si votre dossier armurerie se trouve dans le sous-dossier template
 
 Utilisation
 -----------
 // Avant le début du code html    
 // Inclusion des class et configuration    
-include_once('armurerie/loadArmurerie.php');    
+include_once('path/to/armurerie/loadArmurerie.php');    
 // Une fois importé, l'armurerie est automatiquement instancié    
 // L'instance est stocké dans la variable superglobal $GLOBAL['armurerie']    
 // Cela permet de pouvoir l'utiliser n'importe ou dans votre code.    

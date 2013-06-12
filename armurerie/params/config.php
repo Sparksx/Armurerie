@@ -17,15 +17,10 @@ $OS2['nbResultSearch'] = 5;
 // -----------------------------------------------------------------------------
 // Gestion du style
 
-// Position de la colonne des stats : right ou left
-$OS2['posColStats'] = 'right';
 
-// Thème de l'armurerie
-// Les thèmes disponible se trouvent dans la variable $OS2['themes']
-$OS2['themeArm'] = 'dark';
-// Aucun thème ne doit/peux s'appeller OS2, cela créer un "bug" normal.
-// Liste des thèmes
-$OS2['themes'] = array('dark', 'silver', 'purple');
+// TODO paramètre indiquant la palette
+$OS2['lienPalette'] = 'http://www.colourlovers.com/palette/2896499/ArmurerieBeta';
+
 // 
 // 
 // -----------------------------------------------------------------------------

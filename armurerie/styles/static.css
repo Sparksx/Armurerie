@@ -50,7 +50,7 @@
 
     overflow:  hidden;
 
-    background-color: #ffffff;
+    background-color: #346C80;
 }
 .divSta #intBarre2 {
     display: inline-block;
@@ -240,8 +240,16 @@
 /* --------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------- */
 
+#OS2_armurerie {
+	width: 600px;
+	
+	margin: 0 auto;
+    margin-top: 20px;
+}
+
 #OS2_armurerie #onePerso {
     width: 600px;
+	
     margin: 0 auto;
     margin-top: 20px;
 }
@@ -256,7 +264,7 @@
 
     background-color: #4187A1;
 
-    color: #333333;
+    color: #282B2C;
     
     -moz-transition-property: color;
 	-webkit-transition-property: color;
@@ -272,6 +280,8 @@
     margin: 5px;
 
     height: 80px;
+	
+	border: 2px solid #346C80;
 }
 #OS2_armurerie #infosPerso div {
     height: 20px;
@@ -323,7 +333,7 @@
 
     overflow:  hidden;
 
-    background-color: #ffffff;
+    background-color: #CDDDE3;
 }
 #OS2_armurerie #infosPerso #intBarre {
     height: 20px;
@@ -369,7 +379,8 @@
     height: 100%;
 
     padding-bottom: 10px;
-    background-color: #f5f5f5;
+	padding-left: 5px;
+    background-color: #CDDDE3;
 	
     -moz-box-shadow: 0px 2px 5px 0px #4A4A4A inset;
     -webkit-box-shadow: 0px 1px 5px 0px #4A4A4A inset;
@@ -382,8 +393,6 @@
     height: 100%;
 
     background-color: #4187A1;
-
-    color: white;
 }
 
 
@@ -391,13 +400,13 @@
     display: inline-block;
 
     position: relative;
-    top: -15px;
+    top: 0px;
 
     width: 50px;
 }
 #OS2_armurerie #statsPerso #armurerie #dofus .dof {
     width: 43px;
-    height: 43px;
+    height: 51px;
     margin: 3px;
 
     text-align: center;
@@ -405,18 +414,18 @@
     cursor: pointer;
 }
 #OS2_armurerie #statsPerso #armurerie #dofus .dof img {
-    max-width: 43px;
-    max-height: 43px;
+    width: 43px;
+    height: 51px;
 }
 
 #OS2_armurerie #statsPerso #armurerie #onPerso {
     display: inline-block;
 
     width: 300px;
-    height: 300px;
+    height: 331px;
     
     position: relative;
-    top: -10px;
+    top: -18px;
 
     margin-left: 5px;
     margin-right: 5px;
@@ -515,8 +524,8 @@
 
     text-align: center;
 
-    background-color: #f5f5f5;
-    color: #333333;
+    background-color: #CDDDE3;
+    color: #282B2C;
 
     -moz-box-shadow: 0px 2px 5px 0px #4A4A4A inset;
     -webkit-box-shadow: 0px 1px 5px 0px #4A4A4A inset;
@@ -542,7 +551,7 @@
     
     text-align: center;
     font-size: 0.8em;
-    color: #d3d3d3;
+    color: #282B2C;
     
     text-decoration: none;
     
@@ -555,7 +564,7 @@
 	    -o-transition-duration: 0.5s;
 }
 #OS2_armurerie #statsPerso #statsPanel #copyright p:hover {
-    color: rgb(48, 47, 43);
+    color: #242627;
 }
 
 /* --------------------------------------------------------- */
@@ -567,17 +576,51 @@
 /* --------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------- */
 
+
 /* Style des popups */
 
+/* popup au survol de la barre d'experience' */
 .OS2popStatsGlobalPerso {
 	width: 520px;
 	
 	padding: 5px;
 	
-	color: black;
+	color: #242627;
 	font-size: 14px;
 	
 	background-color: #4187A1;
 	
-	border: 1px solid #9a9a9a;
+	border: 2px solid #346C80;
+}
+
+
+/* Popup au survol des stats */
+.OS2popStatsPerso {
+	width: 180px;
+	
+	padding: 5px;
+	
+	color: #242627;
+	font-size: 14px;
+	
+	background-color: #4187A1;
+	
+	border: 2px solid #346C80;
+}
+.OS2popStatsPerso .qtip-content {
+	text-align: center;
+}
+
+
+.OS2popItems {
+	width: 370px;
+	
+	padding: 5px;
+	
+	color: #242627;
+	font-size: 14px;
+	
+	background-color: #4187A1;
+	
+	border: 2px solid #346C80;
 }
