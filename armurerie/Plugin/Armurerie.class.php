@@ -105,6 +105,8 @@ class Armurerie extends Securisation {
             }
         }
         
+        edebug($this);
+        
         
         // On génère le html :
         $html = '';
@@ -234,11 +236,6 @@ class Armurerie extends Securisation {
                         if($this->maj !== false)
         $html .=            '<a href="'.self::$_lienCom.'" target="_blank"><img src="'.$pathToDossierArmurerie.'images/elements/maintenance.png" class="tooltip" title="Version actuel : '.$this->OS2['version'].' - Mise à jour disponible : '.$this->maj.'" alt="Maj dispo" /></a>';
         
-                        foreach($this->OS2['themes'] as $theme) {
-        $html .=            '<div class="'.$theme.'">';
-        $html .=                '';
-        $html .=            '</div>';
-                        }
         $html .=        '</div>';
         
         $html .=        '<div id="name">'.ucfirst($personnage->getName()).'</div>';
@@ -284,7 +281,7 @@ class Armurerie extends Securisation {
         if(!($personnage instanceof Personnage))
             throw new Exception('Le paramètre doit être déclaré et une instance de la classe Personnage');
         
-        $html = '<div id="statsPanel" class="'.$this->OS2['posColStats'].'">';
+        $html = '<div id="statsPanel">';
         $html .=    '<p class="stati titre">Statistiques</p>';
         $html .=    '<p class="stati mini">';
         $html .=        '<span class="tooltip" title="(Base + Equipements)">';

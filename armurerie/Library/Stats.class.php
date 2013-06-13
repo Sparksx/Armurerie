@@ -1,48 +1,5 @@
 <?php
 
-/*
-  Class Stats
-  @author			Sparks
-  @param			Facultatifs : int $lvl, string $stats
-
-  fonctions accessibles :
-  readStringStats($string) Paramètre obligatoire, $string au format : '6f#1#0#0#0d0+1,70#9#0#0#0d0+9'
-  readStringStats($type, $value) Paramètres obligatoires, $type > int ; $value > int
-
-  Exemples d'utilisation
-
-  - Utilisation sans agrument :
-  $var = new Stats;	// Toutes les valeurs sont donc à 0
-
-  // On veux ajouté des stats :
-  $var->readStringStats('6f#1#0#0#0d0+1,70#9#0#0#0d0+9');
-
-  // Puis on souhait récupèrer les stats
-  echo $var->getPa();		// Affiche : 1 (+1 dans le readStringStats)
-
-  - Utilisation de l'argument $lvl :
-  (Utile pour les personnages)
-  $var = new Stats(101);	// Toutes les valeurs sont à 0 ormis les pa à 7 et les pm à 3
-
-  // On veux ajouté des stats :
-  $var->readStringStats('6f#1#0#0#0d0+1,70#9#0#0#0d0+9');
-
-  // Puis on souhait récupèrer les stats
-  echo $var->getPa();		// Affiche : 8 (7 de base (car + de level 100) + 1 dans le readStringStats)
-
-  - Utilisation de l'argument $stats :
-  (Utile pour les items)
-  // Si on a pas besoin de l'argument $lvl il faut le mettre à -1
-  $var = new Stats(-1, '6f#1#0#0#0d0+1,70#9#0#0#0d0+9,73#1#0#0#0d0+1');	// La classe analysera la string
-
-  // On veux ajouté des stats :
-  $var->readStringStats('6f#1#0#0#0d0+1,70#9#0#0#0d0+9');
-
-  // Puis on souhait récupèrer les stats
-  echo $var->getPa();		// Affiche : 2 (1 dans l'appel de la classe + 1 dans le readStringStats)
-
- */
-
 class Stats {
 
     private $pa = array('min' => 0, 'max' => 0);
@@ -107,7 +64,7 @@ class Stats {
     private $perFebE = array('min' => 0, 'max' => 0);
     private $perFebA = array('min' => 0, 'max' => 0);
 
-    private $tabType = array(
+    private static $tabType = array(
         91 => 'setVolE',
         92 => 'setVolT',
         93 => 'setVolA',
@@ -169,7 +126,7 @@ class Stats {
         249 => 'setFebA',
     );
     
-    private $typeToString = array(
+    private static $typeToString = array(
         'dom' => 'dommages',
         'perdom' => '% dommages',
         'cc' => 'coups critiques',
@@ -261,8 +218,8 @@ class Stats {
             throw new Exception('L\'argument $type doit être précisé');
         if (!isset($var))
             throw new Exception('L\'argument $var doit être précisé');
-        if (array_key_exists($type, $this->tabType)) {
-            $method = $this->tabType[$type];
+        if (array_key_exists($type, self::$tabType)) {
+            $method = self::$tabType[$type];
             if (method_exists($this, $method))
                 $this->$method($var);
             else
@@ -272,6 +229,7 @@ class Stats {
 
     public function getAllStats()
     {
+    	
         $allStats = array();
         foreach ($this as $attribut => $valeur) {
             if(array_key_exists('min', $valeur)) {
@@ -306,8 +264,8 @@ class Stats {
         else
             $op2 = $min.' à '. $max;
         
-        if(array_key_exists($type, $this->typeToString))
-            $op3 = $this->typeToString[$type];
+        if(array_key_exists($type, self::$typeToString))
+            $op3 = self::$typeToString[$type];
         else
             $op3 = $type;
         

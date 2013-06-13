@@ -48,3 +48,43 @@ define('POSBOU', 15);
 // Constantes d'affichage de l'armurerie
 define('ALL', -2);
 define('CHARGE', -1);
+
+
+
+/*
+ * Constantes des noms de champs de la base de donnée
+ */
+
+// Table des comptes
+define('TABLECOMPTES', 'accounts');
+define('COID', 'guid');				// Identifiant unique du compte
+
+// Table des personnages :
+define('TABLEPERSO', 'personnages');
+define('PEID', 'guid');				// Identifiant unique du personnage
+define('PENOM', 'name');			// Nom du personnage
+define('PECOMPTE', 'account');		// Référence au compte du personnage
+
+// Table des items
+define('TABLEITEMS', 'items');
+define('ITMID', 'guid');			// Identifiant unique d'un item
+define('ITMPOS', 'pos');			// Position de l'item sur le personnage
+define('ITMSTATS', 'stats');		// Statistique de l'item du personnage
+define('ITMTEMPLATE', 'template');	// Référence au template de l'item
+
+// Table des panoplies
+define('TABLEPANO', 'itemsets');
+define('PAID', 'id');				// Identifiant unique d'une panoplie
+
+// Table des templates d'items
+define('TABLEITEMTEMPLATE', 'item_template');
+define('ITID', 'id');				// Identifiant unique d'une template
+define('ITTYPE', 'type');			// Type d'item
+define('IFGFX', 'gfx');				// Gfx de l'item
+define('ITNOM', 'name');			// Nom de l'item
+define('ITLEVEL', 'level');			// Niveau de l'item
+define('ITPOID', 'pod');			// Poid de l'item
+define('ITPANO', 'panoplie');		// Référence a la panoplie de l'item
+define('ITCONDITION', 'condition');	// Conditions pour équiper l'item
+define('ITINFOS', 'armesInfos');		// Information des armes
+

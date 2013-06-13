@@ -44,10 +44,14 @@ class Personnage {
             elseif ($key == 'vitalite' || $key == 'force' || $key == 'sagesse' || $key == 'intelligence' || $key == 'chance' || $key == 'agilite') {
                 $this->stats->setStatsPerso($key, $value);
             } else {
+            	$this->$key = $value;
+				
+				/*
                 $method = 'set' . ucfirst($key);
                 if (method_exists($this, $method)) {
                     $this->$method($value);
                 }
+                //*/
             }
         }
     }

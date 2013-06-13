@@ -51,7 +51,7 @@ class BddManager extends Securisation {
         if (!isset($id) || !is_int($id))
             throw new Exception('L\'argument $id est obligatoire et doit être un nombre');
 
-        $requete = $this->getDb()->query('SELECT * FROM personnages WHERE guid = ' . $this->secu($id));
+        $requete = $this->getDb()->query('SELECT * FROM '.TABLEPERSO.' WHERE '.PEID.' = ' . $this->secu($id));
         $donnees = $requete->fetch(PDO::FETCH_ASSOC);
         if (empty($donnees)) {
             return false;
@@ -64,7 +64,7 @@ class BddManager extends Securisation {
         if (!($compte instanceof Compte))
             throw new Exception('L\'argument doit être une instance de la classe Compte');
 
-        $requete = $this->getDb()->query('SELECT * FROM personnages WHERE account = ' . $this->secu($compte->getGuid()));
+        $requete = $this->getDb()->query('SELECT * FROM '.TABLEPERSO.' WHERE '.PECOMPTE.' = ' . $this->secu($compte->getGuid()));
         $donnees = $requete->fetchAll(PDO::FETCH_ASSOC);
         if (empty($donnees)) {
             return false;
@@ -81,7 +81,7 @@ class BddManager extends Securisation {
         if (!isset($id) || !is_int($id))
             throw new Exception('L\'argument $id est obligatoire et doit être un nombre');
 
-        $requete = $this->getDb()->query('SELECT * FROM accounts WHERE guid = ' . $this->secu($id));
+        $requete = $this->getDb()->query('SELECT * FROM '.TABLECOMPTES.' WHERE '.COID.' = ' . $this->secu($id));
         $donnees = $requete->fetch(PDO::FETCH_ASSOC);
         if (empty($donnees)) {
             return false;
@@ -94,7 +94,7 @@ class BddManager extends Securisation {
         if (!isset($st) || !is_string($st))
             throw new Exception('L\'argument $st est obligatoire et doit être une string');
         
-        $result = $this->select_all_other('*', 'personnages', 'name', $st);
+        $result = $this->select_all_other('*', TABLEPERSO, PENOM, $st);
         if($result) {
             return new Personnage($result, $this);
         }
@@ -102,9 +102,9 @@ class BddManager extends Securisation {
             if(empty($this->OS2['nbResultSearch']) || !is_int($this->OS2['nbResultSearch']))
                 throw new Exception('Le paramètre nbResultSearch present dans la configuration doit être déclaré et un nombre');
             
-            $requete = $this->getDb()->prepare('SELECT * FROM personnages 
+            $requete = $this->getDb()->prepare('SELECT * FROM '.TABLEPERSO.' 
             WHERE 
-            name LIKE "%'.$this->secu($st).'%"
+            '.PENOM.' LIKE "%'.$this->secu($st).'%"
             LIMIT 0,'.$this->OS2['nbResultSearch']);
             $requete->execute();
             $personnages = $requete->fetchAll();
@@ -117,7 +117,7 @@ class BddManager extends Securisation {
         if (!isset($id) || !is_int($id))
             throw new Exception('L\'argument $id est obligatoire et doit être un nombre');
 
-        $requete = $this->getDb()->query('SELECT * FROM itemsets WHERE id = ' . $id);
+        $requete = $this->getDb()->query('SELECT * FROM '.TABLEPANO.' WHERE '.PAID.' = ' . $id);
         $donnees = $requete->fetch(PDO::FETCH_ASSOC);
         if (empty($donnees)) {
             throw new Exception('Aucuns panoplie ne possède l\'id ' . $id);
@@ -129,18 +129,15 @@ class BddManager extends Securisation {
     public function loadItems($liste = null) {
         if (!isset($liste) || !is_string($liste))
             throw new Exception('L\'argument $id est obligatoire et doit être une string');
-        //*
-        $requete = $this->getDb()->query('SELECT i.guid, i.pos, i.stats, i.template, t.type, t.gfx, t.name, t.level, t.pod, t.panoplie, t.condition, t.armesInfos
-            FROM items AS i, item_template AS t
+        $requete = $this->getDb()->query('SELECT i.'.ITMID.', i.'.ITMPOS.', i.'.ITMSTATS.', i.'.ITMTEMPLATE.', t.'.ITTYPE.', t.'.IFGFX.', t.'.ITNOM.', t.'.ITLEVEL.', t.'.ITPOID.', t.'.ITPANO.', t.'.ITCONDITION.', t.'.ITINFOS.'
+            FROM '.TABLEITEMS.' AS i, '.TABLEITEMTEMPLATE.' AS t
             WHERE 
-                i.template = t.id
+                i.'.ITMTEMPLATE.' = t.'.ITID.'
                 AND
-                i.pos != -1
+                i.'.ITMPOS.' != -1
                 AND
-                i.guid IN( ' . $liste . ')'
+                i.'.ITMID.' IN( ' . $liste . ')'
         );
-        //*/
-        //$r = $this->getDb()->query('SELECT * FROM items WHERE guid = '.$id);
         $donnees = $requete->fetchAll(PDO::FETCH_ASSOC);
         $requete->closeCursor();
         return $donnees;
