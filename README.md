@@ -36,19 +36,19 @@ Installation
 L'installation de l'armurerie est simple :      
 
 1ere étape :       
-Si votre table item template ne contient pas les gfx des items importez-y 
-le fichier <code>/sql/updateItemTemplate.sql</code>   
+<p>Si votre table item template ne contient pas les gfx des items importez-y 
+le fichier <code>/sql/updateItemTemplate.sql</code></p> 
              
 2ème étape :        
-Placez le dossier <code>/armurerie/</code> et tout son contenu dans le ftp de votre site        
+<p>Placez le dossier <code>/armurerie/</code> et tout son contenu dans le ftp de votre site</p>        
          
 3ème étape :        
-Avant le début du code html ajoutez :          
-<code><?php include_once('path/to/armurerie/loadArmurerie.php'); ?></code>  (path/to/armurerie est bien évidement à changer)      
+<p>Avant le début du code html ajoutez :          
+<code><?php include_once('path/to/armurerie/loadArmurerie.php'); ?></code>  (path/to/armurerie est bien évidement à changer)</p>      
 
 4ème étape :        
-Dans le fichier <code>loadArmurerie.php</code> modifiez la variable <code>$pathToDossierArmurerie</code> afin qu'elle contienne le chemin relatif vers le dossier de l'armurerie
-par exemple : <code>$pathToDossierArmurerie = '../template/armurerie/';</code> si votre dossier armurerie se trouve dans le sous-dossier template
+<p>Dans le fichier <code>loadArmurerie.php</code> modifiez la variable <code>$pathToDossierArmurerie</code> afin qu'elle contienne le chemin relatif vers le dossier de l'armurerie<br />
+par exemple : <code>$pathToDossierArmurerie = '../template/armurerie/';</code> si votre dossier armurerie se trouve dans le sous-dossier template</p>
 
 Utilisation
 -----------
@@ -88,6 +88,6 @@ Reviens à faire :
 Contact
 -------
 
-En cas d'erreur, de bugs, de questions, d'idée d'amélioration, postez une issue sur Github.
+<p>En cas d'erreur, de bugs, de questions, d'idée d'amélioration, postez une issue sur Github.</p>
 
 Sparks
