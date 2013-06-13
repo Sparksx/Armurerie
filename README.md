@@ -37,14 +37,14 @@ L'installation de l'armurerie est simple :
 
 1ere étape :       
 Si votre table item template ne contient pas les gfx des items importez-y 
-le fichier `/sql/updateItemTemplate.sql`   
+le fichier <pre>/sql/updateItemTemplate.sql</pre>   
              
 2ème étape :        
-Placez le dossier `/armurerie/` et tout son contenu dans le ftp de votre site        
+Placez le dossier <pre>/armurerie/</pre> et tout son contenu dans le ftp de votre site        
          
 3ème étape :        
 Avant le début du code html ajoutez :          
-`<?php include_once('path/to/armurerie/loadArmurerie.php'); ?>`  (path/to/armurerie est bien évidement à changer)      
+<pre><?php include_once('path/to/armurerie/loadArmurerie.php'); ?></pre>  (path/to/armurerie est bien évidement à changer)      
 
 4ème étape :        
 Dans le fichier `loadArmurerie.php` modifiez la variable `$pathToDossierArmurerie` afin qu'elle contienne le chemin relatif vers le dossier de l'armurerie
@@ -75,12 +75,14 @@ Utilisation
 	}
 </pre> 
 
-Astuce :    
-`$GLOBALS['armurerie']->load(361);      
-echo $GLOBALS['armurerie']->show();`      
+Astuce :
+<pre>
+	$GLOBALS['armurerie']->load(361);
+	echo $GLOBALS['armurerie']->show();
+</pre>
       
 Reviens à faire :       
-`echo $GLOBALS['armurerie']->show(361);`      
+<pre>echo $GLOBALS['armurerie']->show(361);</pre>      
 
 
 Contact
