@@ -7,12 +7,12 @@ L'armurerie est gratuite
 Introduction
 ------------
 
-La classe Armurerie est une classe utilisant plusieurs autres classes. Cette 
+<p>La classe Armurerie est une classe utilisant plusieurs autres classes. Cette 
 inter-connexion permet de créer un décodage des items et des statistiques 
 des personnages. La conception de cette classe permet une utilisation simple 
-et rapide.
+et rapide.</p>
 
-Un rendu personnalisable est généré automatiquement à l'endroit ou vous voulez l'afficher    
+<p>Un rendu personnalisable est généré automatiquement à l'endroit ou vous voulez l'afficher.</p>       
 
 
 Fichiers principaux
@@ -21,14 +21,14 @@ Fichiers principaux
 Tout les fichiers se trouvent dans le dossier /armurerie/ son appellation 
 seras donc omise ci-suivant.       
 
-* `/class/Armurerie.class.php`	Class principal, affiche le rendu.      
-* `/class/BddManager.class.php`	Class de connexion à la base de donnée       
-* `/class/Item.class.php`		Class décodant les items du personnage       
-* `/class/Panoplie.class.php`	Class décodant les panoplies        
-* `/class/Personnage.class.php`	Class décodant les personnages        
-* `/class/Stats.class.php`		Class décodant les statistiques (perso + item)        
-* `loadArmurerie.php`			Appel des class et fichiers de configuration ; Ce fichier est à inclure dans la page ou vous utilisez l'armurerie                
-* `/params/config.php`			Fichier de configuration       
+* <code>/class/Armurerie.class.php</code>	Class principal, affiche le rendu.      
+* <code>/class/BddManager.class.php</code>	Class de connexion à la base de donnée       
+* <code>/class/Item.class.php</code>		Class décodant les items du personnage       
+* <code>/class/Panoplie.class.php</code>	Class décodant les panoplies        
+* <code>/class/Personnage.class.php</code>	Class décodant les personnages        
+* <code>/class/Stats.class.php</code>		Class décodant les statistiques (perso + item)        
+* <code>loadArmurerie.php</code>			Appel des classes et fichiers de configuration ; Ce fichier est à inclure dans la page ou vous utilisez l'armurerie                
+* <code>/params/config.php</code>			Fichier de configuration       
 
 Installation
 ------------
@@ -88,7 +88,6 @@ Reviens à faire :
 Contact
 -------
 
-En cas d'erreur, de bugs, de questions, d'idée d'amélioration n'hésitez pas ! 
-me contacter par Email.
+En cas d'erreur, de bugs, de questions, d'idée d'amélioration, postez une issue sur Github.
 
 Sparks
