@@ -52,28 +52,28 @@ par exemple : `$pathToDossierArmurerie = '../template/armurerie/';` si votre dos
 
 Utilisation
 -----------
-<code>// Avant le début du code html    
-// Inclusion des class et configuration    
-include_once('path/to/armurerie/loadArmurerie.php');    
-// Une fois importé, l'armurerie est automatiquement instancié    
-// L'instance est stocké dans la variable superglobal $GLOBAL['armurerie']    
-// Cela permet de pouvoir l'utiliser n'importe ou dans votre code.    
-
-
-// A l'intèrieur du code html    
-// Instanciation et affichage du rendu    
-try {    
-	// Chargement des personnages du compte 24    
-	$GLOBALS['armurerie']->load(24, true);    
-	// Chargement du personnages 361    
-	$GLOBALS['armurerie']->load(361);    
-	// Chargement du personnages 370, 376 et 245    
-	$GLOBALS['armurerie']->load(array(370, 376, 245));    
-	// Affiche de tout les personnages chargé.    
-	echo $GLOBALS['armurerie']->show();    
-} catch (Exception $e) {    
-	echo $e->__toString();    
-}</code> 
+<pre>
+	// Avant le début du code html    
+	// Inclusion des class et configuration    
+	include_once('path/to/armurerie/loadArmurerie.php');    
+	// Une fois importé, l'armurerie est automatiquement instancié    
+	// L'instance est stocké dans la variable superglobal $GLOBAL['armurerie']    
+	// Cela permet de pouvoir l'utiliser n'importe ou dans votre code.
+	// A l'intèrieur du code html    
+	// Instanciation et affichage du rendu    
+	try {    
+		// Chargement des personnages du compte 24    
+		$GLOBALS['armurerie']->load(24, true);    
+		// Chargement du personnages 361    
+		$GLOBALS['armurerie']->load(361);    
+		// Chargement du personnages 370, 376 et 245    
+		$GLOBALS['armurerie']->load(array(370, 376, 245));    
+		// Affiche de tout les personnages chargé.    
+		echo $GLOBALS['armurerie']->show();    
+	} catch (Exception $e) {    
+		echo $e->__toString();    
+	}
+</pre> 
 
 Astuce :    
 `$GLOBALS['armurerie']->load(361);      
