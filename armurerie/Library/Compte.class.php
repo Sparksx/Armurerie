@@ -12,7 +12,6 @@ class Compte {
     private $level = 0;
     private $vip = 0;
     private $pseudo = 0;
-    
     private $personnages = array();
     
     

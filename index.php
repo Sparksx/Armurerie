@@ -8,7 +8,7 @@
 		
 		<?php
 		// Inclure le fichier loadArmurerie ENTRE LES BALISES <head>
-		include_once 'armurerie/loadArmurerie.php';
+		include_once('armurerie/loadArmurerie.php');
 		?>
     </head>
     <body>

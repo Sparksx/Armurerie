@@ -52,7 +52,7 @@ par exemple : `$pathToDossierArmurerie = '../template/armurerie/';` si votre dos
 
 Utilisation
 -----------
-// Avant le début du code html    
+`// Avant le début du code html    
 // Inclusion des class et configuration    
 include_once('path/to/armurerie/loadArmurerie.php');    
 // Une fois importé, l'armurerie est automatiquement instancié    
@@ -73,14 +73,14 @@ try {
 	echo $GLOBALS['armurerie']->show();    
 } catch (Exception $e) {    
 	echo $e->__toString();    
-}    
+}`         
 
 Astuce :    
-$GLOBALS['armurerie']->load(361);      
-echo $GLOBALS['armurerie']->show();      
+`$GLOBALS['armurerie']->load(361);      
+echo $GLOBALS['armurerie']->show();`      
       
 Reviens à faire :       
-echo $GLOBALS['armurerie']->show(361);      
+`echo $GLOBALS['armurerie']->show(361);`      
 
 
 Contact
