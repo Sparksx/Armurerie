@@ -1,59 +1,59 @@
 V1.0
-Cration de l'utilisation "simple"
-DÃ©codage de la quasi totalit des statistiques (il en manque probablement)
+CrÃ©ation de l'utilisation "simple"
+DâˆšÂ©codage de la quasi totalitÃ© des statistiques (il en manque probablement)
 Mise en place des images (gfx, il peut en manquer)
-Barre d'xp basique, affichage du %tage et de l'xp ˆ atteindre pour "up"
+Barre d'xp basique, affichage du %tage et de l'xp Ã  atteindre pour "up"
 Affichage du titre (modifiables en config : params/config.php)
 Affichage de l'image de classe/sexe
 Affichage du nom du personnage
 Affichage des statistiques principal du perso (base + items +  bonus pano)
 Mise en place des popup d'affichage des stats des items (au survol de l'item)
-Mise en place de popup de prcision des stats du personnage
+Mise en place de popup de prÃ©cision des stats du personnage
 
 V1.10
-Ajout de 2 nouveau thmes (dark (de base), silver et purple)
-Ajout d'un systme de vÃ©rification de maj (En cas de maj dispo, un drapeau s'affiche dans le coin suprieur droit)
-Correction d'une faille de scurit thoriquement inexploitable. (pas exploitable, mais on scurise quand mme !)
-Ajout de la possibilit de configurer le thme
-Ajout de la possibilit de changer de position la colonne de stats
+Ajout de 2 nouveau thÃªmes (dark (de base), silver et purple)
+Ajout d'un systÃ¨me de vâˆšÂ©rification de maj (En cas de maj dispo, un drapeau s'affiche dans le coin supÃ¨rieur droit)
+Correction d'une faille de sÃ©curitÃ© thÃ©oriquement inexploitable. (pas exploitable, mais on sÃ©curise quand mÃªme !)
+Ajout de la possibilitÃ© de configurer le thÃªme
+Ajout de la possibilitÃ© de changer de position la colonne de stats
 Ajout d'une variable demandant le nom du serveur (Affichage dans le copyright)
 Ajout d'icons dans les popup d'items
 
 V1.11
 Correction du fichier updateItemTemplate.sql (Celui-ci ne fonctionnais visiblement pas)
-Modification de la gestion des thmes
-	- L'administrateur choisis 1 thme par dfaut
-	- L'utilisateur peux personnaliser le thme (uniquement pour lui)
-Ajout d'un fichier CSS static, le css est appliqu quelque soit le thme
+Modification de la gestion des thÃ¨mes
+	- L'administrateur choisis 1 thÃªme par dÃ©faut
+	- L'utilisateur peux personnaliser le thÃªme (uniquement pour lui)
+Ajout d'un fichier CSS static, le css est appliquÃ© quelque soit le thÃªme
 Modification de la popup d'experience.
-Optimisation de la requte d'importation des items : (1 seule requte charge tout les items quip au lieu d'une requte par item dans l'inventaire ; Gain de temps et de ressources non ngociable)
+Optimisation de la requÃªte d'importation des items : (1 seule requÃªte charge tout les items Ã©quipÃ© au lieu d'une requÃªte par item dans l'inventaire ; Gain de temps et de ressources non nÃ©gociable)
 Ajout du module de recherche :
-	- Activable/dsactivable en config
-	- Le module s'adapte au thme
-	- Si le nom du personnage entr n'xiste pas, le module affiche des probabilit de rsultat (nombre d'affichage configurable en config)
-RÃ©paration : Quand on change de thme les popup suivent (Un bug subsiste au retour sur le thme initial)
+	- Activable/dÃ©sactivable en config
+	- Le module s'adapte au thÃªme
+	- Si le nom du personnage entrÃ© n'Ã©xiste pas, le module affiche des probabilitÃ© de rÃ©sultat (nombre d'affichage configurable en config)
+RâˆšÂ©paration : Quand on change de thÃªme les popup suivent (Un bug subsiste au retour sur le thÃªme initial)
 
 V1.20
 Modification de l'architecture des dossiers
-	- Sparation des bibliothÃ©ques et du plugin en lui mme
-Ajout d'une bibliothque de scurisation (encore peu implmente)
+	- SÃ©paration des bibliothâˆšÂ©ques et du plugin en lui mÃªme
+Ajout d'une bibliothÃ¨que de sÃ©curisation (encore peu implÃ©mentÃ©e)
 Correction d'un bug au changement de couleur
-Ajout d'un fichier expliquant le fonctionnement du plugin (pas des bibliothÃ¨ques)
-Modification du fonctionnement de la classe mre :
-	- L'implmentation de la classe ne crer plus la vue et ne charge plus de personnage, cela sert juste ˆ dclar la configuration.
-	- Le chargement d'un personnage peut tre excut de 2 faÃ§ons
-	- L'appel de l'affichage n'est faisable que d'une faon.
+Ajout d'un fichier expliquant le fonctionnement du plugin (pas des bibliothâˆšÂ®ques)
+Modification du fonctionnement de la classe mÃ¨re :
+	- L'implÃ©mentation de la classe ne crÃ©er plus la vue et ne charge plus de personnage, cela sert juste Ã  dÃ©clarÃ© la configuration.
+	- Le chargement d'un personnage peut Ãªtre exÃ©cutÃ© de 2 faâˆšÃŸons
+	- L'appel de l'affichage n'est faisable que d'une faÃ§on.
 	(Plus d'infos sur la nouvelle utilisation dans ReadMe.txt)
-On peux maintenant charg plusieurs personnages.
-On peux maintenant charg les personnage d'un compte.
-La nouvelle vue offre 2 affichages diffrents (selon si 1 ou plusieurs perso on Ã©tÃ© chargÃ©)
+On peux maintenant chargÃ© plusieurs personnages.
+On peux maintenant chargÃ© les personnage d'un compte.
+La nouvelle vue offre 2 affichages diffÃ©rents (selon si 1 ou plusieurs perso on âˆšÂ©tâˆšÂ© chargâˆšÂ©)
 
 V1.30
-Suppression du chargement multiple (jug inutil et surchargeant)
-Suppression du systme actuel de thmes (Trop peu pratique)
-Mise ˆ jour des popups (partie code)
-Corrections globals et amliorations
-Gain de mmoire sur la classe stats
+Suppression du chargement multiple (jugÃ© inutil et surchargeant)
+Suppression du systÃªme actuel de thÃªmes (Trop peu pratique)
+Mise Ã  jour des popups (partie code)
+Corrections globals et amÃ©liorations
+Gain de mÃ©moire sur la classe stats
 
 
 
