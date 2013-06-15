@@ -27,7 +27,7 @@ class Armurerie extends Securisation {
         $this->sendRequest();
         self::$instances++;
     }
-	
+
 	public static function edebug($var, $echo) {
 		$s = "<pre>".print_r($var, true)."</pre>";
 		if(!$echo) return $s;
@@ -104,8 +104,6 @@ class Armurerie extends Securisation {
                 }
             }
         }
-        
-        edebug($this);
         
         
         // On génère le html :

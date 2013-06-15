@@ -56,7 +56,7 @@ class Personnage {
         }
     }
 
-    public function getStatsBase($stats = null) {
+    public function getStatsBase($stats) {
         $method = 'get' . ucfirst($stats);
         if (method_exists($this->stats, $method)) {
             return $this->stats->$method();
@@ -65,7 +65,7 @@ class Personnage {
         }
     }
 
-    public function getStatsEquipe($stats = null) {
+    public function getStatsEquipe($stats) {
         $tot = 0;
         $panoEquiped = array();
         foreach ($this->objets as $item) {

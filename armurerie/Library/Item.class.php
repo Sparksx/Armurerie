@@ -45,16 +45,21 @@ class Item {
             throw new Exception('Les stats de l\'objet n\'on pas été déclaré');
         if (!is_string($type))
             throw new Exception('Le paramètre doit être une chaine de caractère');
-
-        $method = 'get' . ucfirst(strtolower($type));
-
-        // Si le getter correspondant existe
-        if (method_exists($this->stats, $method)) {
-            // On appelle le getter
-            return $this->stats->$method();
-        } else {
-            throw new Exception('La statistique ' . $type . ' n\'éxiste pas');
+		
+		
+		
+		$idType = array_search(ucfirst($type), stats::$tabType);
+		$idsType = array_keys(stats::$tabType, ucfirst($type));
+		
+		$total = 0;
+		
+		foreach($idsType as $idType) {
+			if(isset($this->stats->$idType)) {
+				$total += $this->stats->$idType;
+			}
         }
+        
+        return $total;
     }
 
     public function getThisStats() {
