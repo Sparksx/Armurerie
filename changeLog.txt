@@ -1,6 +1,6 @@
 V1.0
 Création de l'utilisation "simple"
-D√©codage de la quasi totalité des statistiques (il en manque probablement)
+Décodage de la quasi totalité des statistiques (il en manque probablement)
 Mise en place des images (gfx, il peut en manquer)
 Barre d'xp basique, affichage du %tage et de l'xp à atteindre pour "up"
 Affichage du titre (modifiables en config : params/config.php)
@@ -12,7 +12,7 @@ Mise en place de popup de précision des stats du personnage
 
 V1.10
 Ajout de 2 nouveau thêmes (dark (de base), silver et purple)
-Ajout d'un système de v√©rification de maj (En cas de maj dispo, un drapeau s'affiche dans le coin supèrieur droit)
+Ajout d'un système de vérification de maj (En cas de maj dispo, un drapeau s'affiche dans le coin supèrieur droit)
 Correction d'une faille de sécurité théoriquement inexploitable. (pas exploitable, mais on sécurise quand même !)
 Ajout de la possibilité de configurer le thême
 Ajout de la possibilité de changer de position la colonne de stats
@@ -35,10 +35,10 @@ R√©paration : Quand on change de thême les popup suivent (Un bug subsiste au
 
 V1.20
 Modification de l'architecture des dossiers
-	- Séparation des biblioth√©ques et du plugin en lui même
+	- Séparation des bibliothèques et du plugin en lui même
 Ajout d'une bibliothèque de sécurisation (encore peu implémentée)
 Correction d'un bug au changement de couleur
-Ajout d'un fichier expliquant le fonctionnement du plugin (pas des biblioth√®ques)
+Ajout d'un fichier expliquant le fonctionnement du plugin (pas des bibliothèques)
 Modification du fonctionnement de la classe mère :
 	- L'implémentation de la classe ne créer plus la vue et ne charge plus de personnage, cela sert juste à déclaré la configuration.
 	- Le chargement d'un personnage peut être exécuté de 2 fa√ßons
@@ -46,7 +46,7 @@ Modification du fonctionnement de la classe mère :
 	(Plus d'infos sur la nouvelle utilisation dans ReadMe.txt)
 On peux maintenant chargé plusieurs personnages.
 On peux maintenant chargé les personnage d'un compte.
-La nouvelle vue offre 2 affichages différents (selon si 1 ou plusieurs perso on √©t√© charg√©)
+La nouvelle vue offre 2 affichages différents (selon si 1 ou plusieurs perso on été chargé)
 
 V1.30
 Suppression du chargement multiple (jugé inutil et surchargeant)
