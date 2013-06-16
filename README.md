@@ -44,7 +44,7 @@ le fichier <code>/sql/updateItemTemplate.sql</code></p>
          
 3ème étape :        
 <p>Avant le début du code html ajoutez :          
-<code><?php include_once('path/to/armurerie/loadArmurerie.php'); ?></code>  (path/to/armurerie est bien évidement à changer)</p>      
+`<?php include_once('path/to/armurerie/loadArmurerie.php'); ?>`  (path/to/armurerie est bien évidement à changer)</p>      
 
 4ème étape :        
 <p>Dans le fichier <code>loadArmurerie.php</code> modifiez la variable <code>$pathToDossierArmurerie</code> afin qu'elle contienne le chemin relatif vers le dossier de l'armurerie<br />
