@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Armurerie by Sparksx</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Armurerie</h1>
+        <h2></h2>
+        <a href="https://github.com/Sparksx/Armurerie" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="armurerie" class="anchor" href="#armurerie"><span class="octicon octicon-link"></span></a>Armurerie</h1>
+
+<p>(c) 2012 Sparks
+L'armurerie est gratuite</p>
+
+<h2>
+<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>La classe Armurerie est une classe utilisant plusieurs autres classes. Cette 
+inter-connexion permet de créer un décodage des items et des statistiques 
+des personnages. La conception de cette classe permet une utilisation simple 
+et rapide.</p>
+
+<p>Un rendu personnalisable est généré automatiquement à l'endroit ou vous voulez l'afficher.</p>       
+
+<h2>
+<a name="fichiers-principaux" class="anchor" href="#fichiers-principaux"><span class="octicon octicon-link"></span></a>Fichiers principaux</h2>
+
+<p>Tout les fichiers se trouvent dans le dossier /armurerie/ son appellation 
+seras donc omise ci-suivant.       </p>
+
+<ul>
+<li>
+<code>/class/Armurerie.class.php</code>   Class principal, affiche le rendu.<br>
+</li>
+<li>
+<code>/class/BddManager.class.php</code>  Class de connexion à la base de donnée<br>
+</li>
+<li>
+<code>/class/Item.class.php</code>        Class décodant les items du personnage<br>
+</li>
+<li>
+<code>/class/Panoplie.class.php</code>    Class décodant les panoplies<br>
+</li>
+<li>
+<code>/class/Personnage.class.php</code>  Class décodant les personnages<br>
+</li>
+<li>
+<code>/class/Stats.class.php</code>       Class décodant les statistiques (perso + item)<br>
+</li>
+<li>
+<code>loadArmurerie.php</code>            Appel des classes et fichiers de configuration ; Ce fichier est à inclure dans la page ou vous utilisez l'armurerie<br>
+</li>
+<li>
+<code>/params/config.php</code>           Fichier de configuration<br>
+</li>
+</ul><h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>L'installation de l'armurerie est simple :      </p>
+
+<p>1ere étape :       </p>
+
+<p>Si votre table item template ne contient pas les gfx des items importez-y 
+le fichier <code>/sql/updateItemTemplate.sql</code></p> 
+             
+
+<p>2ème étape :        </p>
+
+<p>Placez le dossier <code>/armurerie/</code> et tout son contenu dans le ftp de votre site</p>        
+         
+
+<p>3ème étape :        </p>
+
+<p>Avant le début du code html ajoutez :          
+<code>include_once('path/to/armurerie/loadArmurerie.php');</code>  (path/to/armurerie est bien évidement à changer)</p>      
+
+<p>4ème étape :        </p>
+
+<p>Dans le fichier <code>loadArmurerie.php</code> modifiez la variable <code>$pathToDossierArmurerie</code> afin qu'elle contienne le chemin relatif vers le dossier de l'armurerie<br>
+par exemple : <code>$pathToDossierArmurerie = '../template/armurerie/';</code> si votre dossier armurerie se trouve dans le sous-dossier template</p>
+
+<h2>
+<a name="utilisation" class="anchor" href="#utilisation"><span class="octicon octicon-link"></span></a>Utilisation</h2>
+
+<pre>
+    // Avant le début du code html    
+    // Inclusion des class et configuration    
+    include_once('path/to/armurerie/loadArmurerie.php');    
+    // Une fois importé, l'armurerie est automatiquement instancié    
+    // L'instance est stocké dans la variable superglobal $GLOBAL['armurerie']    
+    // Cela permet de pouvoir l'utiliser n'importe ou dans votre code.
+    // A l'intèrieur du code html    
+    // Instanciation et affichage du rendu    
+    try {    
+        // Chargement des personnages du compte 24    
+        $GLOBALS['armurerie']-&gt;load(24, true);    
+        // Chargement du personnages 361    
+        $GLOBALS['armurerie']-&gt;load(361);    
+        // Chargement du personnages 370, 376 et 245    
+        $GLOBALS['armurerie']-&gt;load(array(370, 376, 245));    
+        // Affiche de tout les personnages chargé.    
+        echo $GLOBALS['armurerie']-&gt;show();    
+    } catch (Exception $e) {    
+        echo $e-&gt;__toString();    
+    }
+</pre> 
+
+<p>Astuce :</p>
+
+<pre>
+    $GLOBALS['armurerie']-&gt;load(361);
+    echo $GLOBALS['armurerie']-&gt;show();
+</pre>
+      
+
+<p>Reviens à faire :       </p>
+
+<pre>echo $GLOBALS['armurerie']-&gt;show(361);</pre>      
+
+<h2>
+<a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h2>
+
+<p>En cas d'erreur, de bugs, de questions, d'idée d'amélioration, postez une issue sur Github.</p>
+
+<p>Sparks</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/Sparksx/Armurerie/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/Sparksx/Armurerie/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/Sparksx/Armurerie"></a> is maintained by <a href="https://github.com/Sparksx">Sparksx</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
